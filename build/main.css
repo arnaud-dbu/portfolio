@@ -1,0 +1,330 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.p-xs {
+  padding: 0.5rem;
+}
+
+.p-sm {
+  padding: 0.75rem;
+}
+
+.p-md {
+  padding: 1.25rem;
+}
+
+.p-lg {
+  padding: 2rem;
+}
+
+.p-xl {
+  padding: 3.25rem;
+}
+
+.p-xxl {
+  padding: 5.25rem;
+}
+
+.ph-xs {
+  padding: 0 0.5rem;
+}
+
+.ph-sm {
+  padding: 0 0.75rem;
+}
+
+.ph-md {
+  padding: 0 1.25rem;
+}
+
+.ph-lg {
+  padding: 0 2rem;
+}
+
+.ph-xl {
+  padding: 0 3.25rem;
+}
+
+.ph-xxl {
+  padding: 0 5.25rem;
+}
+
+.pv-xs {
+  padding: 0.5rem 0;
+}
+
+.pv-sm {
+  padding: 0.75rem 0;
+}
+
+.pv-md {
+  padding: 1.25rem 0;
+}
+
+.pv-lg {
+  padding: 2rem 0;
+}
+
+.pv-xl {
+  padding: 3.25rem 0;
+}
+
+.pv-xxl {
+  padding: 5.25rem 0;
+}
+
+.pb-xs {
+  padding-bottom: 0.5rem;
+}
+
+.pb-sm {
+  padding-bottom: 0.75rem;
+}
+
+.pb-md {
+  padding-bottom: 1.25rem;
+}
+
+.pb-lg {
+  padding-bottom: 2rem;
+}
+
+.pb-xl {
+  padding-bottom: 3.25rem;
+}
+
+.pb-xxl {
+  padding-bottom: 5.25rem;
+}
+
+.pt-xs {
+  padding-top: 0.5rem;
+}
+
+.pt-sm {
+  padding-top: 0.75rem;
+}
+
+.pt-md {
+  padding-top: 1.25rem;
+}
+
+.pt-lg {
+  padding-top: 2rem;
+}
+
+.pt-xl {
+  padding-top: 3.25rem;
+}
+
+.pt-xxl {
+  padding-top: 5.25rem;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../src/assets/fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/assets/fonts/Montserrat-Light.woff2") format("woff2"), url("../src/assets/fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/assets/fonts/Montserrat-Thin.woff2") format("woff2"), url("../src/assets/fonts/Montserrat-Thin.woff") format("woff");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Poiret One";
+  src: url("../src/assets/fonts/PoiretOne-Regular.woff2") format("woff2"), url("../src/assets/fonts/PoiretOne-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Megrim";
+  src: url("../src/assets/fonts/Megrim.woff2") format("woff2"), url("../src/assets/fonts/Megrim.woff") format("woff");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #EBF6FF;
+  font-family: "Montserrat";
+  line-height: 1.5;
+  margin: 0;
+  background-color: #A89D8E;
+}
+
+h2 {
+  font-family: "Poiret One";
+  font-size: 10rem;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.overflow-hidden {
+  overflow-x: hidden;
+}
+
+.img-full-width {
+  width: 100%;
+}
+
+.img-border-radius {
+  border-radius: 5rem;
+}
+
+.img-box-shadow {
+  box-shadow: 0px 1px 10px -4px #363636;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  fill: #EBF6FF;
+}
+.hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.hero .hero__bg {
+  position: absolute;
+  width: 150%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.hero__name {
+  font-family: "Megrim";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__name .hero__firstname {
+  font-size: 7rem;
+}
+.hero__name .hero__lastname {
+  font-size: 2rem;
+  position: relative;
+  bottom: 22%;
+  left: 7%;
+}
+.hero .hero__function {
+  position: relative;
+  font-family: "Poiret One";
+  font-size: 2.5rem;
+  display: block;
+  align-self: end;
+  width: 14rem;
+  text-transform: uppercase;
+  bottom: 5vh;
+  text-align: end;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.skills .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.skills .skill__icon {
+  width: 4rem;
+}
+.skills .skill__title {
+  font-family: "Megrim";
+  font-size: 1.5rem;
+}
+
+.projects .projects__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects .project {
+  width: 50%;
+  height: 12.5rem;
+  background-image: url("../src/assets/images/brochure-01.jpg");
+  background-size: cover;
+}
+.projects .project__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

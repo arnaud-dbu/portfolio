@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "styles": "sass src/styles/main.scss build/main.css --watch",
+    "scripts": "esbuild src/scripts/main.js --bundle --outfile=build/main.js --watch",
+    "start": "concurrently npm:styles npm:scripts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "esbuild": "^0.14.38",
+    "sass": "^1.50.1"
+  },
+  "dependencies": {
+    "gsap": "^3.10.4"
+  }
+}
