@@ -1,0 +1,135 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    @include screen-lg {
+        padding: 2rem;
+
+    }
+
+    &__bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1000vw;
+        z-index: -1;
+        
+        @include screen-sm {
+            width: 700vw;
+        }
+
+        @include screen-md {
+            width: 600vw;
+        
+        }
+        @include screen-lg {
+            left: 60%;
+            width: 450vw;    
+        }
+        @include screen-xl {
+            width: 500rem;
+        }
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include screen-lg {
+            left: 60%;
+        }
+        
+        .hero__firstname {
+            font-family: $font-secondary;
+            text-transform: uppercase;
+            font-size: 22.5vw;
+            
+            @include screen-md {
+                font-size: 20vw;
+                
+            }
+            @include screen-lg {
+                font-size: 18vw;
+            }
+
+            @include screen-xl {
+                font-size: 20rem;
+            }
+        }
+
+        .hero__lastname {
+            font-family: $font-primary;
+            font-size: 6vw;
+            position: absolute;
+            bottom: 0;
+            right: 17.54%;
+            
+            @include screen-sm {
+                font-size: 5vw;
+            }
+
+            @include screen-md {
+                font-size: 4vw;
+                bottom: 3%;
+                
+            }
+            @include screen-lg {
+                font-size: 4vw;
+            }
+
+            @include screen-xl {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    .hero__function {
+        position: absolute;
+        font-family: $font-secondary;
+        color: $color-tertiary;
+        line-height: 1;
+        text-transform: uppercase;
+        bottom: 3vh;
+        right: 1vh;
+        font-size: 11.5vw;
+
+        @include flex-column-end;
+
+        @include screen-sm {
+            font-size: 3rem;
+        }
+        
+        @include screen-md {
+            font-size: 4rem;
+        }
+
+        @include screen-lg {
+            flex-direction: row;
+            gap: 1rem;
+            font-size: 5rem;
+            bottom: 2rem;
+            right: 40%;
+            transform: translateX(50%);
+            width: 100vw;
+            justify-content: center;
+        
+        }
+
+        @include screen-xl {
+            font-size: 6rem;
+        }
+    }
+}
