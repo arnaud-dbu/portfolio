@@ -10,34 +10,35 @@
 
 <body>
     <section class="hero overflow-hidden">
-        <!-- <div class="hero__bg"></div> -->
-        <img src="./src/assets/SVG/logo-bg-primary.svg" alt="" class="hero__bg">
         <header class="header pt-sm ph-sm">
-            <img src="./src/assets/SVG/logo-white.svg" alt="logo" class="header__logo">
-            <img src="./src/assets/SVG/hamburger-white.svg" alt="menu-btn" class="header__hamburger">
+            <img src="./src/assets/SVG/logo.svg" alt="logo" class="header__logo">
+            <img src="./src/assets/SVG/hamburger.svg" alt="menu-btn" class="header__hamburger">
         </header>
         <div class="hero__name ph-sm">
             <span class="hero__firstname">Arnaud</span>
             <span class="hero__lastname">De Burchgraeve</span>
+            <div class="hero__bg"></div>
         </div>
         <span class="hero__function ph-sm">Developer & Designer</span>
     </section>
-
+    
     <section class="about pv-lg">
-        <h2 class="about__title overflow-hidden">About</h2>
+        <h2 class="title overflow-hidden">About</h2>
         <div class="about__content ph-lg">
             <p class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            <img  class="about__img img-full-width img-border-radius img-box-shadow" src="./src/assets/images/DSCF7652.JPG" alt="Portret Arnaud De Burchgraeve">
+            <img  class="about__img img-border-radius" src="./src/assets/images/DSCF7652.JPG" alt="Portret Arnaud De Burchgraeve">
         </div>
     </section>
 
-    <section class="skills p-lg">
+    <section class="skills">
+        <div class="skills__bg"></div>
+        <h2 class="title title--small">Skills</h2>
         <div class="skill">
-            <img src="./src/assets/SVG/graphic-design.svg" alt="Graphic Design" class="skill__icon">
+            <img src="./src/assets/SVG/graphic.svg" alt="Graphic Design" class="skill__icon">
             <span class="skill__title">Graphic Design</span>
         </div>
         <div class="skill">
-            <img src="./src/assets/SVG/user-interface.svg" alt="User Interface Design" class="skill__icon">
+            <img src="./src/assets/SVG/ui.svg" alt="User Interface Design" class="skill__icon">
             <span class="skill__title">User Interface Design</span>
         </div>
         <div class="skill">
@@ -46,8 +47,8 @@
         </div>
     </section>
     
-    <section class="projects pv-lg">
-        <h2 class="projects__title overflow-hidden">Projects</h2>
+    <section class="projects">
+        <h2 class="title overflow-hidden">Projects</h2>
         <ul class="projects__content">
                 <li class="project">
                     <a class="project__link" href=""></a>
@@ -90,7 +91,33 @@
                     </a>
                 </li>
         </ul>
+    </section>
 
+    <section class="contact p-lg">
+        <div class="contact__bg"></div>
+        <h2 class="title title--small">Contact me</h2>
+        <div class="contact__text">
+            <p class="text-center">I’m interested in freelance opportunities – especially ambitious or large projects.</p>
+            <p class="text-center">However, if you have other request or question, don’t hesitate </p>                 
+        </div>
+        <a href="" class="contact__btn btn">
+            <img src="./src/assets/SVG/send.svg" alt="send btn" class="contact__btn-img">
+            <span>SEND MESSAGE</span>
+        </a>
+    </section>
+
+    <section class="footer overflow-hidden">
+        <ul class="footer__content">
+            <li class="footer__item">
+                <a href="">About</a>
+            </li>
+            <li class="footer__item">
+                <a href="">Work</a>
+            </li>
+            <li class="footer__item">
+                <a href="">Contact</a>
+            </li>
+        </ul>
     </section>
 
 

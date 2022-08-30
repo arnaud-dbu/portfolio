@@ -1,0 +1,14 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+
+.btn {
+    @include flex-row-center;
+    font-family: $font-primary;
+    background-color: $color-tertiary;
+    color: $color-secondary;
+    font-weight: 300;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+}

@@ -1,0 +1,36 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.footer {
+    background-color: $color-secondary;
+
+    &__content {
+
+        @include flex-row-center;
+        gap: 3rem;
+
+        .footer__item {
+            position: relative;
+
+            &::after {
+                content:"";
+                position: absolute;
+                width: 0.75rem;
+                height: 0.75rem;
+                border: 1.5px solid $color-primary;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -2rem;
+                border-radius: 50%;
+            }
+
+            a {
+                text-transform: uppercase;
+                font-family: $font-primary;
+                font-weight: 300;
+                color: $color-primary;
+                font-size: 2rem;
+            }
+        }
+    }
+}

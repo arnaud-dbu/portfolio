@@ -1,0 +1,19 @@
+@use '../utils/mixins'as *;
+
+.contact {
+    position: relative;
+    padding-bottom: 3rem;
+
+    &__bg {
+        position: absolute ;
+        background-image: url('../src/assets/SVG/bg-chain-2.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 80%;
+        z-index: -1;
+        opacity: 0.85;
+    }
+
+    @include flex-column-center;
+}

@@ -1,0 +1,51 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.about {
+
+    &__content {
+
+        @include flex-column-center;
+        $size: 15rem;
+
+        .about__img {
+            object-fit: cover;
+            width: $size;
+            height: $size;
+            filter: grayscale(50%);
+        }
+    }
+}
+
+.skills {
+    @include flex-column;
+    gap: 2rem;
+    position: relative;
+    padding: 2rem 0 2rem;
+
+    &__bg {
+        background-image: url('../src/assets/SVG/bg-single.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 1rem;
+        height: 100%;
+        width: 100vw;
+    }
+
+    .skill {
+        @include flex-column-center;
+        gap: 0.25rem;
+
+        &__icon {
+            width: 4rem;
+            fill: $color-tertiary;
+        }
+
+        &__title {
+            font-family: $font-primary;
+            font-size: 1.5rem;
+        }
+    }
+}

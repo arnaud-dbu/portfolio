@@ -1,0 +1,21 @@
+@use '../utils/variables' as *;
+
+.title {
+    font-family: $font-secondary;
+    font-size: 13rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.title--small {
+    text-transform: capitalize;
+    font-size: 3.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}

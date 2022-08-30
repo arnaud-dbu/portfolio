@@ -1,0 +1,18 @@
+@use '../utils/variables' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    fill: $color-text-primary;
+    width: 100%;
+    opacity: 0.85;
+    
+    &__logo {
+        width: 2rem;
+    }
+    
+    &__hamburger {
+        width: 2rem;
+    }
+}

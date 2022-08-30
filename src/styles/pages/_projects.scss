@@ -1,0 +1,26 @@
+.projects {
+    
+    .projects__content {           
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .project {
+        // background-color: red;
+        // border: 2px solid black;
+        width: 50%;
+        height: 12.5rem;
+        background-image: url("../src/assets/images/brochure-01.jpg");
+        background-size: cover;
+
+        &__link {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__btn {
+            
+        }
+    }
+}
