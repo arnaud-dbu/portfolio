@@ -23,6 +23,18 @@
         .about__text {
             @include screen-md {
                 text-align: start;
+                position: relative;
+                padding-left: 2rem;
+
+                &::after {
+                    content: "";
+                    height: 90%;
+                    width: 1px;
+                    position: absolute;
+                    background-color: $color-tertiary;
+                    left: 0;
+                    top: 0;
+                }
             }
 
             @include screen-lg {
