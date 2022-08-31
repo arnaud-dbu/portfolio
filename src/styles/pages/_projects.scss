@@ -6,12 +6,11 @@
     }
 
     .project {
-        // background-color: red;
-        // border: 2px solid black;
         width: 50%;
-        height: 12.5rem;
+        aspect-ratio: 1/1;
         background-image: url("../src/assets/images/brochure-01.jpg");
         background-size: cover;
+        filter: grayscale(30%);
 
         &__link {
             display: block;

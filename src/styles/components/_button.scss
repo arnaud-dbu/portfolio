@@ -7,8 +7,19 @@
     font-family: $font-primary;
     background-color: $color-tertiary;
     color: $color-secondary;
-    font-weight: 300;
+    font-weight: 400;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     width: fit-content;
+    
+    @include screen-lg {
+        gap: 0.75rem;
+        font-size: 1.5rem;
+    }
+
+    img {
+        @include screen-lg {
+            width: 1.5rem;
+        }
+    }
 }

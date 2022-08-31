@@ -11,7 +11,7 @@
 <body>
     <section class="hero overflow-hidden">
         <img src="./src/assets/SVG/bg-chain.svg" alt="" class="hero__bg">
-        <header class="header pt-sm ph-sm wrapper">
+        <header class="header pt-sm ph-sm">
             <a class="header__logo" href="">
                 <img src="./src/assets/SVG/logo.svg" alt="logo" class="header__logo">
             </a>
@@ -41,14 +41,15 @@
     <section class="about wrapper pv-lg">
         <h2 class="title overflow-hidden">About</h2>
         <div class="about__content ph-lg">
-            <p class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p class="about__text text-center pb-lg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
             <img  class="about__img img-border-radius" src="./src/assets/images/DSCF7652.JPG" alt="Portret Arnaud De Burchgraeve">
         </div>
     </section>
 
-    <section class="skills">
-        <div class="skills__bg"></div>
-        <h2 class="title title--small">Skills</h2>
+    <section class="skills wrapper">
+        <!-- <img src="./src/assets/SVG/bg-single.svg" alt="" class="skills__bg"> -->
+        <!-- <div class="skills__bg"></div> -->
+        <h2 class="skills__title title title--small">Skills</h2>
         <div class="skill">
             <img src="./src/assets/SVG/graphic.svg" alt="Graphic Design" class="skill__icon">
             <span class="skill__title">Graphic Design</span>
@@ -64,8 +65,8 @@
     </section>
     
     <section class="projects">
-        <h2 class="title overflow-hidden">Projects</h2>
-        <ul class="projects__content">
+        <h2 class="title overflow-hidden wrapper">Work</h2>
+        <ul class="projects__content wrapper">
                 <li class="project">
                     <a class="project__link" href=""></a>
                         <div class="project__btn"></div>
@@ -111,15 +112,17 @@
 
     <section class="contact p-lg">
         <div class="contact__bg"></div>
-        <h2 class="title title--small">Contact me</h2>
-        <div class="contact__text">
-            <p class="text-center">I’m interested in freelance opportunities – especially ambitious or large projects.</p>
-            <p class="text-center">However, if you have other request or question, don’t hesitate </p>                 
+        <div class="contact__content wrapper">
+            <h2 class="title title--small contact__title">Contact me</h2>
+            <div class="contact__text">
+                <p class="text-center">I’m interested in freelance opportunities – especially ambitious or large projects.</p>
+                <p class="text-center">However, if you have other request or question, don’t hesitate </p>                 
+            </div>
+            <a href="" class="contact__btn btn">
+                <img src="./src/assets/SVG/send.svg" alt="send btn" class="contact__btn-img">
+                <span>Send message</span>
+            </a>
         </div>
-        <a href="" class="contact__btn btn">
-            <img src="./src/assets/SVG/send.svg" alt="send btn" class="contact__btn-img">
-            <span>SEND MESSAGE</span>
-        </a>
     </section>
 
     <section class="footer overflow-hidden">

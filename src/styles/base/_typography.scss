@@ -1,10 +1,15 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .title {
     font-family: $font-secondary;
     font-size: 13rem;
     text-transform: uppercase;
     text-align: center;
+
+    @include screen-lg {
+        text-align: start;
+    }
 }
 
 .title--small {
