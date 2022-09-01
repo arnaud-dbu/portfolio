@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="29.638" height="23.541" viewBox="0 0 29.638 23.541">
-  <g id="Group_180" data-name="Group 180" transform="translate(-324.362 -28.059)">
-    <rect id="Rectangle_41" data-name="Rectangle 41" width="29.638" height="2.524" transform="translate(324.362 28.059)" fill="#edf2ef"/>
-    <rect id="Rectangle_42" data-name="Rectangle 42" width="29.638" height="2.524" transform="translate(324.362 38.567)" fill="#edf2ef"/>
-    <rect id="Rectangle_43" data-name="Rectangle 43" width="29.638" height="2.524" transform="translate(324.362 49.076)" fill="#edf2ef"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="29.638" height="23.541" viewBox="0 0 29.638 23.541"><g transform="translate(-324.362 -28.059)"><rect width="29.638" height="2.524" transform="translate(324.362 28.059)" fill="#edf2ef"/><rect width="29.638" height="2.524" transform="translate(324.362 38.567)" fill="#edf2ef"/><rect width="29.638" height="2.524" transform="translate(324.362 49.076)" fill="#edf2ef"/></g></svg>

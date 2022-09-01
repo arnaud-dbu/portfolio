@@ -13,6 +13,7 @@
     
     &__bg {
         position: absolute;
+        pointer-events: none;
         background-image: url('../src/assets/SVG/bg-chain-2.svg');
         background-repeat: no-repeat;
         background-position: center;

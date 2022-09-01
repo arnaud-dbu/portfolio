@@ -2,12 +2,13 @@
 @use '../utils/mixins'as *;
 
 .header {
-    $size: 2.5rem;
+    $size: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     fill: $color-text-primary;
     width: 100%;
+    z-index: 100;
 
     // opacity: 0.85;
 
@@ -19,6 +20,7 @@
     }
 
     &__logo {
+        
         img {
             width: $size;
 

@@ -1,4 +1,57 @@
 (() => {
+  var __create = Object.create;
+  var __defProp = Object.defineProperty;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __getProtoOf = Object.getPrototypeOf;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __commonJS = (cb, mod) => function __require() {
+    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  };
+  var __copyProps = (to, from, except, desc) => {
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (let key of __getOwnPropNames(from))
+        if (!__hasOwnProp.call(to, key) && key !== except)
+          __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+    }
+    return to;
+  };
+  var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target, mod));
+
+  // src/scripts/events.js
+  var require_events = __commonJS({
+    "src/scripts/events.js"() {
+      var events2 = {
+        init() {
+          this.cacheElements();
+          this.generateUI();
+        },
+        cacheElements() {
+          this.$hamburgerBtn = document.querySelector(".header__hamburger");
+          this.$closeBtn = document.querySelector(".nav__close");
+          this.$mobileNav = document.querySelector(".nav__mobile");
+        },
+        generateUI() {
+          this.generateMobileNavigation();
+        },
+        generateMobileNavigation() {
+          this.$hamburgerBtn.addEventListener("click", (ev) => {
+            ev.preventDefault();
+            this.$mobileNav.classList.remove("js-hidden");
+          });
+          this.$closeBtn.addEventListener("click", (ev) => {
+            ev.preventDefault();
+            this.$mobileNav.classList.add("js-hidden");
+          });
+        }
+      };
+      events2.init();
+    }
+  });
+
+  // src/scripts/main.js
+  var import_events = __toESM(require_events());
+
   // node_modules/gsap/gsap-core.js
   function _assertThisInitialized(self) {
     if (self === void 0) {
@@ -4324,9 +4377,9 @@
     var s = _ref2.s, d2 = _ref2.d2, d = _ref2.d, a = _ref2.a;
     return (s = "scroll" + d2) && (a = _getProxyProp(element, s)) ? a() - _getBoundsFunc(element)()[d] : _isViewport3(element) ? (_docEl2[s] || _body2[s]) - (_win4["inner" + d2] || _docEl2["client" + d2] || _body2["client" + d2]) : element[s] - element["offset" + d2];
   };
-  var _iterateAutoRefresh = function _iterateAutoRefresh2(func, events) {
+  var _iterateAutoRefresh = function _iterateAutoRefresh2(func, events2) {
     for (var i = 0; i < _autoRefresh.length; i += 3) {
-      (!events || ~events.indexOf(_autoRefresh[i + 1])) && func(_autoRefresh[i], _autoRefresh[i + 1], _autoRefresh[i + 2]);
+      (!events2 || ~events2.indexOf(_autoRefresh[i + 1])) && func(_autoRefresh[i], _autoRefresh[i + 1], _autoRefresh[i + 2]);
     }
   };
   var _isString3 = function _isString4(value) {

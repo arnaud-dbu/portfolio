@@ -1,17 +1,105 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+@use '../utils/variables'as *;
+@use '../utils/mixins'as *;
 
 .hero {
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
 
     @include screen-lg {
         padding: 2rem;
+    }
 
+    &__shapes {
+        display: flex;
+        gap: 1rem;
+        @include center;
+
+        .hero__shape {
+            overflow: hidden;
+            $size: 2.5rem;
+            width: $size * 13;
+            height: $size * 15;
+            border-radius: 0 $size*6 $size*6 0;
+            border: 0.1px solid $color-secondary;
+            // background-image: linear-gradient(70deg,
+            //         hsl(0deg 0% 21%) 0%,
+            //         hsl(229deg 28% 40%) 11%,
+            //         hsl(228deg 35% 52%) 22%,
+            //         hsl(228deg 55% 61%) 33%,
+            //         hsl(228deg 82% 69%) 44%,
+            //         hsl(228deg 97% 76%) 56%,
+            //         hsl(228deg 89% 82%) 67%,
+            //         hsl(227deg 75% 86%) 78%,
+            //         hsl(222deg 52% 90%) 89%,
+            //         hsl(144deg 16% 94%) 100%);
+
+            background-image: linear-gradient(70deg,
+                    hsl(0deg 0% 21%) 0%,
+                    hsl(144deg 0% 27%) 24%,
+                    hsl(144deg 0% 33%) 35%,
+                    hsl(144deg 1% 39%) 44%,
+                    hsl(144deg 1% 45%) 51%,
+                    hsl(144deg 1% 52%) 57%,
+                    hsl(144deg 1% 59%) 64%,
+                    hsl(144deg 2% 65%) 70%,
+                    hsl(144deg 2% 72%) 77%,
+                    hsl(144deg 4% 79%) 84%,
+                    hsl(144deg 7% 87%) 91%,
+                    hsl(144deg 16% 94%) 100%);
+
+            $size: 2rem;
+            width: $size * 7;
+            height: $size * 9;
+            border-radius: 0 $size*3.5 $size*3.5 0;
+            opacity: 0.4;
+
+            @include screen-sm {
+                $size: 2.5rem;
+                width: $size * 7;
+                height: $size * 9;
+                border-radius: 0 $size*3.5 $size*3.5 0;
+            }
+
+            @include screen-md {
+                $size: 5rem;
+                width: $size * 7;
+                height: $size * 9;
+                border-radius: 0 $size*3.5 $size*3.5 0;
+            }
+
+            @include screen-lg {
+                $size: 5rem;
+                width: $size * 7;
+                height: $size * 9;
+                border-radius: 0 $size*3.5 $size*3.5 0;
+            }
+
+            @include screen-xl {
+                width: $size * 7;
+                height: $size * 9;
+                border-radius: 0 $size*3.5 $size*3.5 0;
+            }
+
+            &.hero__shape--outline {
+                //   border: 0.1px solid $color-secondary;
+                background-image: linear-gradient(70deg,
+                        rgba(255, 255, 255, 0) 0%,
+                        rgba(255, 255, 255, 0) 11%,
+                        rgba(90, 107, 175, 0) 22%,
+                        rgba(101, 123, 210, 0) 33%,
+                        rgba(111, 137, 241, 0) 44%,
+                        rgba(134, 158, 253, 0) 56%,
+                        rgba(168, 184, 250, 0) 67%,
+                        rgba(193, 204, 246, 0) 78%,
+                        rgba(216, 224, 243, 0) 89%,
+                        rgba(237, 242, 239, 0) 100%);
+                background-color: transparent;
+                opacity: 0.5;
+            }
+        }
     }
 
     &__bg {
@@ -21,19 +109,21 @@
         transform: translate(-50%, -50%);
         width: 1000vw;
         z-index: -1;
-        
+
         @include screen-sm {
             width: 700vw;
         }
 
         @include screen-md {
             width: 600vw;
-        
+
         }
+
         @include screen-lg {
             left: 60%;
-            width: 450vw;    
+            width: 450vw;
         }
+
         @include screen-xl {
             width: 500rem;
         }
@@ -51,16 +141,17 @@
         @include screen-lg {
             left: 55%;
         }
-        
+
         .hero__firstname {
             font-family: $font-secondary;
             text-transform: uppercase;
             font-size: 22.5vw;
-            
+
             @include screen-md {
                 font-size: 20vw;
-                
+
             }
+
             @include screen-lg {
                 font-size: 18vw;
             }
@@ -76,7 +167,7 @@
             position: absolute;
             bottom: 0;
             right: 17.54%;
-            
+
             @include screen-sm {
                 font-size: 5vw;
             }
@@ -84,8 +175,9 @@
             @include screen-md {
                 font-size: 4vw;
                 bottom: 3%;
-                
+
             }
+
             @include screen-lg {
                 font-size: 4vw;
             }
@@ -111,9 +203,9 @@
         @include screen-sm {
             font-size: 3rem;
         }
-        
+
         @include screen-md {
-            font-size: 4rem;
+            font-size: 4.5rem;
         }
 
         @include screen-lg {
@@ -125,7 +217,7 @@
             transform: translateX(50%);
             width: 100vw;
             justify-content: center;
-        
+
         }
 
         @include screen-xl {
