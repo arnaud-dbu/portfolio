@@ -3,6 +3,8 @@
 
 .footer {
     background-color: $color-secondary;
+    // width: 100vw;
+    overflow: hidden;
 
     &__content {
 
@@ -29,7 +31,7 @@
                 font-family: $font-primary;
                 font-weight: 300;
                 color: $color-primary;
-                font-size: 2rem;
+                font-size: 3rem;
             }
         }
     }

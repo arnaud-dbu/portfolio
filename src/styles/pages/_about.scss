@@ -59,9 +59,8 @@
 
 .skills {
     @include flex-column;
-    gap: 2rem;
+    gap: 3rem;
     position: relative;
-    padding: 2rem 0 2rem;
     background: rgb(167, 167, 167);
     background: linear-gradient(90deg, rgba(167, 167, 167, 0.231) 0%, rgba(177, 177, 177, 0.203) 35%, rgba(137, 137, 137, 0.154) 100%);
 

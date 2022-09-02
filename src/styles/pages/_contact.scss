@@ -12,7 +12,7 @@
 
     
     &__bg {
-        position: absolute;
+        @include center;
         pointer-events: none;
         background-image: url('../src/assets/SVG/bg-chain-2.svg');
         background-repeat: no-repeat;
@@ -25,7 +25,6 @@
     
     &__content {
         @include flex-column-center;
-        padding: 3rem 0;
         width: 100%;
 
         @include screen-lg {
@@ -49,6 +48,10 @@
                     width: 75%;
                 }
             }
+        }
+
+        .contact__btn {
+            margin-bottom: 1.5rem;
         }
     }
 }
