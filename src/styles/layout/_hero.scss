@@ -196,12 +196,11 @@
         text-transform: uppercase;
         bottom: 3vh;
         right: 1vh;
-        font-size: 11.5vw;
+        font-size: 3.25rem;
 
         @include flex-column-end;
 
         @include screen-sm {
-            font-size: 3rem;
         }
 
         @include screen-md {

@@ -81,7 +81,9 @@
     </section>
     
     <section id="about" class="about wrapper pv-lg">
-        <h2 class="title overflow-hidden">About</h2>
+        <div class="title-container">
+            <h2 class="about__title title">About</h2>
+        </div>
         <div class="about__content ph-lg">
             <div class="about__text text-center pb-lg">
                 <p>Hoi, Ik ben Arnaud De Burchgraeve.</p> 
@@ -94,7 +96,7 @@
     </section>
 
     <section id="skills" class="skills wrapper">
-        <h2 class="skills__title title title--small">Skills</h2>
+        <!-- <h2 class="skills__title title title--small">Skills</h2> -->
         <div class="skill">
             <img src="./src/assets/SVG/graphic.svg" alt="Graphic Design" class="skill__icon">
             <span class="skill__title">Graphic Design</span>
@@ -110,7 +112,9 @@
     </section>
     
     <section id="projects" class="projects">
-        <h2 class="title overflow-hidden wrapper">Work</h2>
+        <div class="title-container">
+            <h2 class="title">Work</h2>
+        </div>
         <ul class="projects__content wrapper">
                 <li class="project" style="background-image: url(../src/assets/images/luloop-2.webp);">
                     <a class="project__link" href="https://www.behance.net/gallery/151660791/Luloop" target="_blank">
@@ -154,7 +158,7 @@
     <section id="contact" class="contact p-lg">
         <div class="contact__bg"></div>
         <div class="contact__content wrapper">
-            <h2 class="title title--small contact__title">Contact me</h2>
+            <!-- <h2 class="title title--small contact__title">Contact me</h2> -->
             <div class="contact__text">
                 <p class="text-center">I’m interested in freelance opportunities – especially ambitious or large projects.</p>
                 <p class="text-center">However, if you have other request or question, don’t hesitate </p>                 
@@ -179,9 +183,9 @@
             </li>
         </ul>
     </section>
-
-
     
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
     <script src="build/main.js"></script>
+</body>
 </html>
