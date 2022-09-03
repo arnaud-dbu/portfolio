@@ -1,4 +1,5 @@
 @use '../utils/mixins'as *;
+@use '../utils/variables'as *;
 
 .contact {
     @include flex-column-center;
@@ -27,16 +28,23 @@
         @include flex-column-center;
         width: 100%;
 
+        .contact__title {
+            font-size: 4rem;
+            font-family: $font-secondary;
+        }
+
         @include screen-lg {
-            align-items: flex-start;
+
+            padding: 3rem 0 3rem;
             
             .contact__title {
                 font-size: 5rem;
-                width: 100%;
+                font-family: $font-secondary;
             }
         }
     
         .contact__text {
+            @include flex-column-center;
     
             @include screen-lg {
                 font-size: 1.5rem;
@@ -44,7 +52,7 @@
     
             p {
                 @include screen-lg {
-                    text-align: start;
+                    // text-align: start;
                     width: 75%;
                 }
             }

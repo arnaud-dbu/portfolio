@@ -3,13 +3,44 @@
 
 .title-primary {
     font-family: $font-secondary;
-    font-size: 13rem;
+    font-size: 6rem;
     text-transform: uppercase;
     text-align: center;
+    position: relative;
+    margin-bottom: 3rem;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 10px;
+        background-color: $color-tertiary;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    @include screen-md {
+        font-size: 10rem;
+        
+        &::after {
+            bottom: 0.5rem;
+            height: 15px;
+        }
+    }
 
     @include screen-lg {
-        text-align: start;
+        font-size: 12rem;
     }
+
+    @include screen-xl {
+        font-size: 14rem;
+    }
+
+    // @include screen-lg {
+    //     text-align: start;
+    // }
 }
 
 .title-container {

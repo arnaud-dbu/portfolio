@@ -17,6 +17,10 @@
         filter: grayscale(60%);
         transition: all 1s ease;
         
+        @include screen-lg {
+            width: 50%;
+        }
+        
         &:hover {
             filter: grayscale(0%);
             background-size: 170%;
@@ -30,7 +34,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #60606094;
+            background-color: #6060607c;
             
             .project__title {
                 display: flex;

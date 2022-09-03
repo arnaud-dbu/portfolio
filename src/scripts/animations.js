@@ -33,14 +33,14 @@ const animations = {
       })
     })
 
-    gsap.to('.hero', {
-      opacity: 0,
-      scrollTrigger: {
-        end: 'bottom 20%',
-        trigger: '.title',
-        scrub: true
-      }
-    })
+    // gsap.to('.hero', {
+    //   opacity: 0,
+    //   scrollTrigger: {
+    //     end: 'bottom 20%',
+    //     trigger: '.title',
+    //     scrub: true
+    //   }
+    // })
 
     gsap.from('.hero__shapes', {
       x: "50vw",
@@ -64,67 +64,72 @@ const animations = {
     })
   },
   animateTitles() {
-    
-    // About Title
+    const $primaryTitles = document.querySelectorAll('.title-primary');
 
-
-    this.$primaryTitles.forEach(title => {
-      
-      gsap.set(title, {
-        x: '200vw',
-        opacity: 0
-      })
-  
-      gsap.to(title, {
-        x: '-95vw',
-        opacity: 1,
+    $primaryTitles.forEach((title) => {
+      gsap.from(title, {
+        opacity: 0,
+        duration: 1,
+        y: "5vh",
         scrollTrigger: 
         {
           trigger: title,
-          scrub: true,
-          start: 'top bottom',
-          end: 'bottom top'
+          start: 'top 85%',
         }
       }, )
     })
 
+  
     // Title Secondary
 
-    this.$secondaryTitles.forEach(title => {
-      gsap.from(title, {
-        y: '10vw',
-        opacity: 0,
+    // this.$secondaryTitles.forEach(title => {
+    //   gsap.from(title, {
+    //     y: '10vw',
+    //     opacity: 0,
   
-        scrollTrigger: {
-          trigger: title,
-          start: 'top bottom',
-          end: 'bottom top',
-        }
-      }, )
-    }) 
+    //     scrollTrigger: {
+    //       trigger: title,
+    //       start: 'top bottom',
+    //       end: 'bottom top',
+    //     }
+    //   }, )
+    // }) 
   },
   animateAbout() {
-    gsap.from('.about__content', {
+    const fadeInFromBottom = (target, trigger) => {
+      gsap.from(target, {
+        y: "5vh",
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: trigger,
+          start: 'top 85%',
+        }
+      })
+    }
+
+    fadeInFromBottom('.about__content', '.about__content');
+    fadeInFromBottom('.skills__bg', '.skills__bg');
+    
+    gsap.from('.skill', {
       y: "10vh",
       opacity: 0,
       duration: 1,
-      scrollTrigger: {
-        trigger: '.about__content',
-        start: 'top bottom',
-      }
-    })
-
-    gsap.from('.skill', {
-      y: "5vh",
-      opacity: 0,
-      duration: 1,
-      stagger: .25,
+      stagger: .1,
       ease: "power4.out",
       scrollTrigger: {
         trigger: '.skills',
-        start: 'top 65%',
+        start: 'top 85%',
       }
     })
+    
+    const $project = document.querySelectorAll('.project');
+    
+    // $project.forEach((project) => {
+    //   fadeInFromBottom(project, project);
+    // })
+
+
 
 
   },

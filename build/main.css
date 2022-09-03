@@ -100,13 +100,39 @@ a {
 
 .title-primary {
   font-family: "Ribes";
-  font-size: 13rem;
+  font-size: 6rem;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.title-primary::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 10px;
+  background-color: #7692FF;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 810px) {
+  .title-primary {
+    font-size: 10rem;
+  }
+  .title-primary::after {
+    bottom: 0.5rem;
+    height: 15px;
+  }
 }
 @media (min-width: 1250px) {
   .title-primary {
-    text-align: start;
+    font-size: 12rem;
+  }
+}
+@media (min-width: 1920px) {
+  .title-primary {
+    font-size: 14rem;
   }
 }
 
@@ -498,7 +524,7 @@ body {
   width: 14rem;
   height: 18rem;
   border-radius: 0 7rem 7rem 0;
-  opacity: 0.4;
+  opacity: 0.75;
 }
 @media (min-width: 414px) {
   .hero__shapes .hero__shape {
@@ -712,7 +738,7 @@ body {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 0.5rem;
   }
 }
 @media (min-width: 1250px) {
@@ -725,15 +751,6 @@ body {
     text-align: start;
     position: relative;
     padding-left: 2rem;
-  }
-  .about__content .about__text::after {
-    content: "";
-    height: 90%;
-    width: 1px;
-    position: absolute;
-    background-color: #7692FF;
-    left: 0;
-    top: 0;
   }
 }
 @media (min-width: 1250px) {
@@ -755,58 +772,66 @@ body {
   }
 }
 
-.skills {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  position: relative;
+.skills .skills__bg {
   background: rgb(167, 167, 167);
   background: linear-gradient(90deg, rgba(167, 167, 167, 0.231) 0%, rgba(177, 177, 177, 0.203) 35%, rgba(137, 137, 137, 0.154) 100%);
 }
 @media (min-width: 810px) {
-  .skills {
-    align-items: flex-start;
+  .skills .skills__bg {
     border-radius: 0 11rem 11rem 0;
-    padding: 3rem;
   }
 }
 @media (min-width: 1250px) {
-  .skills__title {
+  .skills .skills__bg .skills__title {
     font-size: 5rem;
+    padding-bottom: 0;
   }
 }
-.skills .skill {
+.skills .skills__bg .skills__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+}
+@media (min-width: 810px) {
+  .skills .skills__bg .skills__content {
+    align-items: flex-start;
+    width: 100%;
+    padding: 3rem;
+    width: fit-content;
+  }
+}
+.skills .skills__bg .skills__content .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 @media (min-width: 810px) {
-  .skills .skill {
+  .skills .skills__bg .skills__content .skill {
     flex-direction: row;
     gap: 1.5rem;
   }
 }
-.skills .skill__icon {
+.skills .skills__bg .skills__content .skill__icon {
   width: 4rem;
   fill: #7692FF;
 }
 @media (min-width: 810px) {
-  .skills .skill__icon {
+  .skills .skills__bg .skills__content .skill__icon {
     width: 4.5rem;
   }
 }
-.skills .skill__title {
-  font-family: "ClashDisplay";
-  font-size: 1.5rem;
+.skills .skills__bg .skills__content .skill__title {
+  font-size: 1.8rem;
 }
 @media (min-width: 810px) {
-  .skills .skill__title {
+  .skills .skills__bg .skills__content .skill__title {
     font-size: 2rem;
   }
 }
 @media (min-width: 1250px) {
-  .skills .skill__title {
+  .skills .skills__bg .skills__content .skill__title {
     font-size: 2.5rem;
   }
 }
@@ -844,14 +869,23 @@ body {
   align-items: center;
   width: 100%;
 }
+.contact__content .contact__title {
+  font-size: 4rem;
+  font-family: "Ribes";
+}
 @media (min-width: 1250px) {
   .contact__content {
-    align-items: flex-start;
+    padding: 3rem 0 3rem;
   }
   .contact__content .contact__title {
     font-size: 5rem;
-    width: 100%;
+    font-family: "Ribes";
   }
+}
+.contact__content .contact__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 1250px) {
   .contact__content .contact__text {
@@ -860,7 +894,6 @@ body {
 }
 @media (min-width: 1250px) {
   .contact__content .contact__text p {
-    text-align: start;
     width: 75%;
   }
 }
@@ -881,6 +914,11 @@ body {
   filter: grayscale(60%);
   transition: all 1s ease;
 }
+@media (min-width: 1250px) {
+  .projects .project {
+    width: 50%;
+  }
+}
 .projects .project:hover {
   filter: grayscale(0%);
   background-size: 170%;
@@ -893,7 +931,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(96, 96, 96, 0.5803921569);
+  background-color: rgba(96, 96, 96, 0.4862745098);
 }
 .projects .project__link .project__title {
   display: flex;

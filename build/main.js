@@ -77,14 +77,6 @@
               ease: "power4.out"
             });
           });
-          gsap.to(".hero", {
-            opacity: 0,
-            scrollTrigger: {
-              end: "bottom 20%",
-              trigger: ".title",
-              scrub: true
-            }
-          });
           gsap.from(".hero__shapes", {
             x: "50vw",
             opacity: 0,
@@ -105,55 +97,45 @@
           });
         },
         animateTitles() {
-          this.$primaryTitles.forEach((title) => {
-            gsap.set(title, {
-              x: "200vw",
-              opacity: 0
-            });
-            gsap.to(title, {
-              x: "-95vw",
-              opacity: 1,
-              scrollTrigger: {
-                trigger: title,
-                scrub: true,
-                start: "top bottom",
-                end: "bottom top"
-              }
-            });
-          });
-          this.$secondaryTitles.forEach((title) => {
+          const $primaryTitles = document.querySelectorAll(".title-primary");
+          $primaryTitles.forEach((title) => {
             gsap.from(title, {
-              y: "10vw",
               opacity: 0,
+              duration: 1,
+              y: "5vh",
               scrollTrigger: {
                 trigger: title,
-                start: "top bottom",
-                end: "bottom top"
+                start: "top 85%"
               }
             });
           });
         },
         animateAbout() {
-          gsap.from(".about__content", {
+          const fadeInFromBottom = (target, trigger) => {
+            gsap.from(target, {
+              y: "5vh",
+              opacity: 0,
+              duration: 1,
+              scrollTrigger: {
+                trigger,
+                start: "top 85%"
+              }
+            });
+          };
+          fadeInFromBottom(".about__content", ".about__content");
+          fadeInFromBottom(".skills__bg", ".skills__bg");
+          gsap.from(".skill", {
             y: "10vh",
             opacity: 0,
             duration: 1,
-            scrollTrigger: {
-              trigger: ".about__content",
-              start: "top bottom"
-            }
-          });
-          gsap.from(".skill", {
-            y: "5vh",
-            opacity: 0,
-            duration: 1,
-            stagger: 0.25,
+            stagger: 0.1,
             ease: "power4.out",
             scrollTrigger: {
               trigger: ".skills",
-              start: "top 65%"
+              start: "top 85%"
             }
           });
+          const $project = document.querySelectorAll(".project");
         },
         animateFooter() {
           gsap.set(".footer__content", {
