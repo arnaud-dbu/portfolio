@@ -2,15 +2,88 @@
 @use '../utils/mixins'as *;
 
 .hero {
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     position: relative;
-
+    
     @include screen-lg {
         height: 100vh;
         padding: 2rem;
+    }
+    
+    
+    .logo-bg {  
+        $size: 1.25rem;
+        width: 37.5 * $size;
+        height: 45 * $size;
+        @include center;
+        overflow-x: hidden;
+        
+        @include screen-md {
+            $size: 1.35rem;
+            width: 37.5 * $size;
+            height: 45 * $size;
+        }
+        
+        @include screen-lg {
+            $size: 1.6rem;
+            width: 37.5 * $size;
+            height: 45 * $size;
+        }
+        
+        @include screen-xl {
+            $size: 2rem;
+            width: 37.5 * $size;
+            height: 45 * $size;
+        }
+
+        &__container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .logo-bg__shape {
+                opacity: 0.65;
+                width: 48%;
+                height: 48%;
+                border-radius: 0 8*$size 8*$size 0;
+                background-image: linear-gradient(
+                    85deg,
+                    hsl(0deg 0% 59%) 0%,
+                    hsl(137deg 0% 55%) 18%,
+                    hsl(137deg 0% 52%) 27%,
+                    hsl(137deg 0% 49%) 34%,
+                    hsl(137deg 0% 45%) 40%,
+                    hsl(137deg 0% 42%) 46%,
+                    hsl(137deg 0% 39%) 52%,
+                    hsl(137deg 0% 36%) 58%,
+                    hsl(137deg 0% 33%) 63%,
+                    hsl(137deg 0% 30%) 70%,
+                    hsl(137deg 0% 27%) 76%,
+                    hsl(137deg 0% 24%) 84%,
+                    hsl(0deg 0% 21%) 100%
+                  );
+            }
+            
+            .logo-bg__shape-1 {
+                bottom: 0;
+                position: absolute;
+            }
+            
+            .logo-bg__shape-2 {
+                top: 0;
+                right: 0;
+                position: absolute;
+            }
+            
+            .logo-bg__shape-3 {
+                bottom: 0;
+                right: 0;
+                position: absolute;
+            }
+        }
     }
 
     &__shapes {
@@ -18,89 +91,89 @@
         gap: 1rem;
         @include center;
 
-        .hero__shape {
-            overflow: hidden;
-            $size: 2.5rem;
-            width: $size * 13;
-            height: $size * 15;
-            border-radius: 0 $size*6 $size*6 0;
-            border: 0.1px solid $color-secondary;
-            // background-image: linear-gradient(70deg,
-            //         hsl(0deg 0% 21%) 0%,
-            //         hsl(229deg 28% 40%) 11%,
-            //         hsl(228deg 35% 52%) 22%,
-            //         hsl(228deg 55% 61%) 33%,
-            //         hsl(228deg 82% 69%) 44%,
-            //         hsl(228deg 97% 76%) 56%,
-            //         hsl(228deg 89% 82%) 67%,
-            //         hsl(227deg 75% 86%) 78%,
-            //         hsl(222deg 52% 90%) 89%,
-            //         hsl(144deg 16% 94%) 100%);
+        //     .hero__shape {
+        //         overflow: hidden;
+        //         $size: 2.5rem;
+        //         width: $size * 13;
+        //         height: $size * 15;
+        //         border-radius: 0 $size*6 $size*6 0;
+        //         border: 0.1px solid $color-secondary;
+        //         // background-image: linear-gradient(70deg,
+        //         //         hsl(0deg 0% 21%) 0%,
+        //         //         hsl(229deg 28% 40%) 11%,
+        //         //         hsl(228deg 35% 52%) 22%,
+        //         //         hsl(228deg 55% 61%) 33%,
+        //         //         hsl(228deg 82% 69%) 44%,
+        //         //         hsl(228deg 97% 76%) 56%,
+        //         //         hsl(228deg 89% 82%) 67%,
+        //         //         hsl(227deg 75% 86%) 78%,
+        //         //         hsl(222deg 52% 90%) 89%,
+        //         //         hsl(144deg 16% 94%) 100%);
 
-            background-image: linear-gradient(70deg,
-                    hsl(0deg 0% 21%) 0%,
-                    hsl(144deg 0% 27%) 24%,
-                    hsl(144deg 0% 33%) 35%,
-                    hsl(144deg 1% 39%) 44%,
-                    hsl(144deg 1% 45%) 51%,
-                    hsl(144deg 1% 52%) 57%,
-                    hsl(144deg 1% 59%) 64%,
-                    hsl(144deg 2% 65%) 70%,
-                    hsl(144deg 2% 72%) 77%,
-                    hsl(144deg 4% 79%) 84%,
-                    hsl(144deg 7% 87%) 91%,
-                    hsl(144deg 16% 94%) 100%);
+        //         background-image: linear-gradient(70deg,
+        //                 hsl(0deg 0% 21%) 0%,
+        //                 hsl(144deg 0% 27%) 24%,
+        //                 hsl(144deg 0% 33%) 35%,
+        //                 hsl(144deg 1% 39%) 44%,
+        //                 hsl(144deg 1% 45%) 51%,
+        //                 hsl(144deg 1% 52%) 57%,
+        //                 hsl(144deg 1% 59%) 64%,
+        //                 hsl(144deg 2% 65%) 70%,
+        //                 hsl(144deg 2% 72%) 77%,
+        //                 hsl(144deg 4% 79%) 84%,
+        //                 hsl(144deg 7% 87%) 91%,
+        //                 hsl(144deg 16% 94%) 100%);
 
-            $size: 2rem;
-            width: $size * 7;
-            height: $size * 9;
-            border-radius: 0 $size*3.5 $size*3.5 0;
-            opacity: 0.75;
+        //         $size: 2rem;
+        //         width: $size * 7;
+        //         height: $size * 9;
+        //         border-radius: 0 $size*3.5 $size*3.5 0;
+        //         opacity: 0.75;
 
-            @include screen-sm {
-                $size: 2.5rem;
-                width: $size * 7;
-                height: $size * 9;
-                border-radius: 0 $size*3.5 $size*3.5 0;
-            }
+        //         @include screen-sm {
+        //             $size: 2.5rem;
+        //             width: $size * 7;
+        //             height: $size * 9;
+        //             border-radius: 0 $size*3.5 $size*3.5 0;
+        //         }
 
-            @include screen-md {
-                $size: 5rem;
-                width: $size * 7;
-                height: $size * 9;
-                border-radius: 0 $size*3.5 $size*3.5 0;
-            }
+        //         @include screen-md {
+        //             $size: 5rem;
+        //             width: $size * 7;
+        //             height: $size * 9;
+        //             border-radius: 0 $size*3.5 $size*3.5 0;
+        //         }
 
-            @include screen-lg {
-                $size: 5rem;
-                width: $size * 7;
-                height: $size * 9;
-                border-radius: 0 $size*3.5 $size*3.5 0;
-            }
+        //         @include screen-lg {
+        //             $size: 5rem;
+        //             width: $size * 7;
+        //             height: $size * 9;
+        //             border-radius: 0 $size*3.5 $size*3.5 0;
+        //         }
 
-            @include screen-xl {
-                width: $size * 7;
-                height: $size * 9;
-                border-radius: 0 $size*3.5 $size*3.5 0;
-            }
+        //         @include screen-xl {
+        //             width: $size * 7;
+        //             height: $size * 9;
+        //             border-radius: 0 $size*3.5 $size*3.5 0;
+        //         }
 
-            &.hero__shape--outline {
-                //   border: 0.1px solid $color-secondary;
-                background-image: linear-gradient(70deg,
-                        rgba(255, 255, 255, 0) 0%,
-                        rgba(255, 255, 255, 0) 11%,
-                        rgba(90, 107, 175, 0) 22%,
-                        rgba(101, 123, 210, 0) 33%,
-                        rgba(111, 137, 241, 0) 44%,
-                        rgba(134, 158, 253, 0) 56%,
-                        rgba(168, 184, 250, 0) 67%,
-                        rgba(193, 204, 246, 0) 78%,
-                        rgba(216, 224, 243, 0) 89%,
-                        rgba(237, 242, 239, 0) 100%);
-                background-color: transparent;
-                opacity: 0.5;
-            }
-        }
+        //         &.hero__shape--outline {
+        //             //   border: 0.1px solid $color-secondary;
+        //             background-image: linear-gradient(70deg,
+        //                     rgba(255, 255, 255, 0) 0%,
+        //                     rgba(255, 255, 255, 0) 11%,
+        //                     rgba(90, 107, 175, 0) 22%,
+        //                     rgba(101, 123, 210, 0) 33%,
+        //                     rgba(111, 137, 241, 0) 44%,
+        //                     rgba(134, 158, 253, 0) 56%,
+        //                     rgba(168, 184, 250, 0) 67%,
+        //                     rgba(193, 204, 246, 0) 78%,
+        //                     rgba(216, 224, 243, 0) 89%,
+        //                     rgba(237, 242, 239, 0) 100%);
+        //             background-color: transparent;
+        //             opacity: 0.5;
+        //         }
+        //     }
     }
 
     &__bg {
@@ -139,9 +212,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        // @include screen-lg {
-        //     left: 55%;
-        // }
+        @include screen-lg {
+            top: 45%;
+        }
 
         .hero__firstname {
             font-family: $font-secondary;
@@ -149,42 +222,39 @@
             font-size: 22.5vw;
 
             @include screen-md {
-                font-size: 20vw;
+                font-size: 19vw;
 
             }
 
             @include screen-lg {
-                font-size: 18vw;
+                font-size: 13.5rem;
             }
 
             @include screen-xl {
-                font-size: 20rem;
+                font-size: 17rem;
             }
         }
 
         .hero__lastname {
             font-family: $font-primary;
-            font-size: 6vw;
+            font-weight: 200;
+            font-size: 10vw;
             position: absolute;
-            bottom: 0;
-            right: 17.54%;
-
-            @include screen-sm {
-                font-size: 5vw;
-            }
-
+            bottom: -15%;
+            
             @include screen-md {
-                font-size: 4vw;
-                bottom: 3%;
-
+                bottom: -10%;
+                font-size: 8vw;
             }
-
+            
             @include screen-lg {
-                font-size: 4vw;
+                bottom: -12.5%;
+                font-size: 6rem;
             }
-
+            
             @include screen-xl {
-                font-size: 5rem;
+                font-size: 8rem;
+                bottom: -12.5%;
             }
         }
     }
@@ -195,33 +265,40 @@
         color: $color-tertiary;
         line-height: 1;
         text-transform: uppercase;
-        bottom: 3vh;
-        right: 1vh;
-        font-size: 3.25rem;
-
+        text-align: center;
+        bottom: 2rem;
+        font-size: 7vw;
+        width: 100%;
+        
+        span {
+            width: 100%;
+        }
+        
         @include flex-column-end;
-
+        
         @include screen-sm {
+            font-size: 6.5vw;
         }
-
+        
         @include screen-md {
-            font-size: 4.5rem;
+            font-size: 5vw;
         }
-
+        
         @include screen-lg {
-            flex-direction: row;
-            gap: 1rem;
-            font-size: 5rem;
-            bottom: 2rem;
-            right: 50%;
-            transform: translateX(50%);
-            width: 100vw;
-            justify-content: center;
+            font-size: 3.5rem;
+            // flex-direction: row;
+            // gap: 1rem;
+            // font-size: 5rem;
+            // bottom: 2rem;
+            // right: 50%;
+            // transform: translateX(50%);
+            // width: 100vw;
+            // justify-content: center;
 
         }
 
         @include screen-xl {
-            font-size: 6rem;
+            font-size: 4.5rem;
         }
     }
 }
