@@ -13,7 +13,7 @@ const animations = {
     this.animateHero();
     this.animateTitles();
     this.animateAbout();
-    this.animateFooter();
+    this.animateMobileNav();
 
     // isSmall: '(min-width: 414px)',
     // isMedium: '(min-width: 810px)',
@@ -43,22 +43,19 @@ const animations = {
     // })
 
     gsap.from('.hero__shapes', {
-      x: "50vw",
       opacity: 0,
-      duration: 12,
+      duration: 15,
       ease: "power4.out"
     })
 
     gsap.from('.hero__firstname', {
-      x: '5vw',
-      duration: 1,
+      duration: 2.5,
       opacity: 0,
       ease: "power1.out"
     })
 
     gsap.from('.hero__lastname', {
-      x: '-1vw',
-      duration: 1,
+      duration: 2.5,
       opacity: 0,
       ease: "power1.out"
     })
@@ -110,6 +107,8 @@ const animations = {
 
     fadeInFromBottom('.about__content', '.about__content');
     fadeInFromBottom('.skills__bg', '.skills__bg');
+    fadeInFromBottom('.projects__content', '.projects__content');
+    fadeInFromBottom('.contact', '.contact');
     
     gsap.from('.skill', {
       y: "10vh",
@@ -143,6 +142,9 @@ const animations = {
       duration: 10,
       repeat: -1
     })
+  },
+  animateMobileNav() {
+
   }
 }
 

@@ -5,22 +5,46 @@ const events = {
   },
   cacheElements() {
     this.$hamburgerBtn = document.querySelector('.header__hamburger');
-    this.$closeBtn = document.querySelector('.nav__close');
-    this.$mobileNav = document.querySelector('.nav__mobile');
+    this.$mobileNavCloseBtn = document.querySelector('.nav-mobile__close');
+    this.$mobileNav = document.querySelector('.nav-mobile');
+    this.$mobileNavLink = document.querySelectorAll('.nav-mobile__list-item');
   },
   generateUI() {
     this.generateMobileNavigation();
   },
   generateMobileNavigation() {
-    this.$hamburgerBtn.addEventListener('click', (ev) => {
+    this.$hamburgerBtn.addEventListener('click', async (ev) => {
       ev.preventDefault();
-      this.$mobileNav.classList.remove('js-hidden');
+      await this.$mobileNav.classList.remove('js-hidden');
+
+      await gsap.set('.nav-mobile', {
+        y: '-100vh'
+      })
+      
+      await gsap.to('.nav-mobile', {
+        y: '0',
+        duration: .5,
+        ease: "power4.out"
+      })
     });
     
-    this.$closeBtn.addEventListener('click', (ev) => {
+    this.$mobileNavCloseBtn.addEventListener('click', async (ev) => {
       ev.preventDefault();
-      this.$mobileNav.classList.add('js-hidden');
+
+      await gsap.to('.nav-mobile', {
+        y: '-100vh',
+        duration: .5,
+        ease: "power4.in"
+      })
+
+      await this.$mobileNav.classList.add('js-hidden');
     })
+
+    this.$mobileNavLink.forEach(link => {
+      link.addEventListener('click', async (ev) => {
+        this.$mobileNav.classList.add('js-hidden');
+      }) 
+    });
   }
 }
 

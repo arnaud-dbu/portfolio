@@ -13,6 +13,7 @@
             align-items: flex-start;
             justify-content: space-between;
             gap: 0.5rem;
+            padding: 0;
         }
 
         @include screen-lg {
@@ -69,18 +70,14 @@
             // border-radius: 10rem;
         }
         
-        .skills__title {
-            
-            @include screen-lg {
-                font-size: 5rem;
-                padding-bottom: 0;
-        }
-    }
+        
     
     
     .skills__content {
         
         @include flex-column;
+        padding-top: 2rem;
+
             gap: 3rem;
             position: relative;
             
@@ -89,7 +86,10 @@
                 width: 100%;
                 padding: 3rem;
                 width: fit-content;
-                
+            }
+
+            @include screen-lg {
+                // padding-top: 0;
             }
             
             
@@ -103,23 +103,23 @@
                 }
                 
                 &__icon {
-                    width: 4rem;
+                    width: 5rem;
                     fill: $color-tertiary;
     
                     @include screen-md {
-                        width: 4.5rem;
+                        width: 5rem;
                     }
                 }
                 
                 &__title {
-                    font-size: 1.8rem;
+                    font-size: 1.65rem;
     
                     @include screen-md {
                         font-size: 2rem;
                     }
     
                     @include screen-lg {
-                        font-size: 2.5rem;
+                        // font-size: 2.5rem;
                     }
                 }
             }

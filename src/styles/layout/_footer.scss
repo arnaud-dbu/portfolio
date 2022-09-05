@@ -3,35 +3,36 @@
 
 .footer {
     background-color: $color-secondary;
-    // width: 100vw;
-    overflow: hidden;
 
     &__content {
 
         @include flex-row-center;
-        gap: 3rem;
+        gap: 0.5rem;
+        
+        @include screen-md {
+            gap: 1rem;
+        }
+
+        .footer__bullet {
+            width: 0.75rem;
+            height: 0.75rem;
+            border: 1.5px solid $color-primary;
+            border-radius: 50%;
+        }
 
         .footer__item {
             position: relative;
-
-            &::after {
-                content:"";
-                position: absolute;
-                width: 0.75rem;
-                height: 0.75rem;
-                border: 1.5px solid $color-primary;
-                top: 50%;
-                transform: translateY(-50%);
-                right: -2rem;
-                border-radius: 50%;
-            }
 
             a {
                 text-transform: uppercase;
                 font-family: $font-primary;
                 font-weight: 300;
                 color: $color-primary;
-                font-size: 3rem;
+                font-size: 1.3rem;
+                
+                @include screen-md {
+                    font-size: 2rem;
+                }
             }
         }
     }

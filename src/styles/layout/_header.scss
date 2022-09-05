@@ -17,6 +17,7 @@
         // background-color: red;
         height: calc(100vh - 4rem);
         position: fixed;
+        width: fit-content;
     }
 
     &__logo {
@@ -42,7 +43,6 @@
 
     &__nav--dekstop {
         display: none;
-        // margin: 0 auto;
 
         @include screen-lg {
             @include flex-column-start;
@@ -51,11 +51,14 @@
             li {
                 a {
                     color: $color-secondary;
-                    text-transform: uppercase;
-                    font-size: 1.35rem;
-                    font-weight: 300;
+                    // text-transform: uppercase;
+                    font-size: 1.5rem;
                     position: relative;
                     text-decoration: none;
+
+                    @include screen-xl {
+                        font-size: 1.75rem;
+                    }
                 }
 
                 a::before {
@@ -77,12 +80,6 @@
                     transform: scaleX(1);
                 }
 
-                @include screen-xl {
-
-                    a {
-                        font-size: 1.75rem;
-                    }
-                }
             }
         }
     }

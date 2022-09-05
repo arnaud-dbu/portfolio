@@ -46,14 +46,10 @@
         .contact__text {
             @include flex-column-center;
     
-            @include screen-lg {
-                font-size: 1.5rem;
-            }
-    
             p {
-                @include screen-lg {
-                    // text-align: start;
-                    width: 75%;
+
+                @include screen-md {
+                    font-size: 1.6rem;
                 }
             }
         }

@@ -3,7 +3,7 @@
 
 .title-primary {
     font-family: $font-secondary;
-    font-size: 6rem;
+    font-size: 4rem;
     text-transform: uppercase;
     text-align: center;
     position: relative;
@@ -15,32 +15,35 @@
         width: 20%;
         height: 10px;
         background-color: $color-tertiary;
-        bottom: -0.5rem;
+        bottom: -1rem;
         left: 50%;
         transform: translateX(-50%);
-
     }
-
+    
+    @include screen-sm {
+        font-size: 4.25rem;
+    }
+    
     @include screen-md {
-        font-size: 10rem;
+        font-size: 8.5rem;
         
         &::after {
-            bottom: 0.5rem;
-            height: 15px;
+            bottom: -0.5rem;
+            bottom: -0.5rem;
+        }
+    }
+    
+    @include screen-lg {
+        font-size: 8.5rem;
+
+        &::after {
+            bottom: 0rem;
         }
     }
 
-    @include screen-lg {
-        font-size: 12rem;
-    }
-
     @include screen-xl {
-        font-size: 14rem;
+        font-size: 10rem;
     }
-
-    // @include screen-lg {
-    //     text-align: start;
-    // }
 }
 
 .title-container {
@@ -52,10 +55,27 @@
     text-align: center;
     text-transform: capitalize;
     font-size: 3.5rem;
+
+    @include screen-lg {
+        font-size: 3.75rem;
+    }
+    
+
+    
 }
 
 p {
     margin-bottom: 1.5rem;
+
+    @include screen-md {
+        font-size: 1.35rem;
+    }
+    
+    @include screen-lg {
+        font-size: 1.45rem;
+    }
+
+    
 }
 
 .text-center {

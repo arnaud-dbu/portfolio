@@ -28,20 +28,39 @@
         },
         cacheElements() {
           this.$hamburgerBtn = document.querySelector(".header__hamburger");
-          this.$closeBtn = document.querySelector(".nav__close");
-          this.$mobileNav = document.querySelector(".nav__mobile");
+          this.$mobileNavCloseBtn = document.querySelector(".nav-mobile__close");
+          this.$mobileNav = document.querySelector(".nav-mobile");
+          this.$mobileNavLink = document.querySelectorAll(".nav-mobile__list-item");
         },
         generateUI() {
           this.generateMobileNavigation();
         },
         generateMobileNavigation() {
-          this.$hamburgerBtn.addEventListener("click", (ev) => {
+          this.$hamburgerBtn.addEventListener("click", async (ev) => {
             ev.preventDefault();
-            this.$mobileNav.classList.remove("js-hidden");
+            await this.$mobileNav.classList.remove("js-hidden");
+            await gsap.set(".nav-mobile", {
+              y: "-100vh"
+            });
+            await gsap.to(".nav-mobile", {
+              y: "0",
+              duration: 0.5,
+              ease: "power4.out"
+            });
           });
-          this.$closeBtn.addEventListener("click", (ev) => {
+          this.$mobileNavCloseBtn.addEventListener("click", async (ev) => {
             ev.preventDefault();
-            this.$mobileNav.classList.add("js-hidden");
+            await gsap.to(".nav-mobile", {
+              y: "-100vh",
+              duration: 0.5,
+              ease: "power4.in"
+            });
+            await this.$mobileNav.classList.add("js-hidden");
+          });
+          this.$mobileNavLink.forEach((link) => {
+            link.addEventListener("click", async (ev) => {
+              this.$mobileNav.classList.add("js-hidden");
+            });
           });
         }
       };
@@ -66,7 +85,7 @@
           this.animateHero();
           this.animateTitles();
           this.animateAbout();
-          this.animateFooter();
+          this.animateMobileNav();
         },
         animateHero() {
           let mm = gsap.matchMedia();
@@ -78,20 +97,17 @@
             });
           });
           gsap.from(".hero__shapes", {
-            x: "50vw",
             opacity: 0,
-            duration: 12,
+            duration: 15,
             ease: "power4.out"
           });
           gsap.from(".hero__firstname", {
-            x: "5vw",
-            duration: 1,
+            duration: 2.5,
             opacity: 0,
             ease: "power1.out"
           });
           gsap.from(".hero__lastname", {
-            x: "-1vw",
-            duration: 1,
+            duration: 2.5,
             opacity: 0,
             ease: "power1.out"
           });
@@ -124,6 +140,8 @@
           };
           fadeInFromBottom(".about__content", ".about__content");
           fadeInFromBottom(".skills__bg", ".skills__bg");
+          fadeInFromBottom(".projects__content", ".projects__content");
+          fadeInFromBottom(".contact", ".contact");
           gsap.from(".skill", {
             y: "10vh",
             opacity: 0,
@@ -146,6 +164,8 @@
             duration: 10,
             repeat: -1
           });
+        },
+        animateMobileNav() {
         }
       };
       animations2.init();
