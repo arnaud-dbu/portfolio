@@ -15,7 +15,7 @@
     
     
     .logo-bg {  
-        $size: 1.25rem;
+        $size: 0.75rem;
         width: 37.5 * $size;
         height: 45 * $size;
         @include center;
@@ -25,6 +25,7 @@
             $size: 1.35rem;
             width: 37.5 * $size;
             height: 45 * $size;
+
         }
         
         @include screen-lg {
@@ -48,7 +49,7 @@
                 opacity: 0.65;
                 width: 48%;
                 height: 48%;
-                border-radius: 0 8*$size 8*$size 0;
+                border-radius: 0 3*$size 3*$size 0;
                 background-image: linear-gradient(
                     85deg,
                     hsl(0deg 0% 59%) 0%,
