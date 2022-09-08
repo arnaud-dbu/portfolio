@@ -398,7 +398,7 @@ body {
   }
 }
 .header__logo img {
-  width: 2rem;
+  width: 2.5rem;
 }
 @media (min-width: 1920px) {
   .header__logo img {
@@ -544,31 +544,14 @@ body {
   }
 }
 .hero .logo-bg {
-  width: 28.125rem;
-  height: 33.75rem;
+  width: 140vw;
+  height: 200vw;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   overflow-x: hidden;
-}
-@media (min-width: 810px) {
-  .hero .logo-bg {
-    width: 50.625rem;
-    height: 60.75rem;
-  }
-}
-@media (min-width: 1250px) {
-  .hero .logo-bg {
-    width: 60rem;
-    height: 72rem;
-  }
-}
-@media (min-width: 1920px) {
-  .hero .logo-bg {
-    width: 75rem;
-    height: 90rem;
-  }
+  opacity: 0.75;
 }
 .hero .logo-bg__container {
   position: relative;
@@ -576,11 +559,12 @@ body {
   height: 100%;
 }
 .hero .logo-bg__container .logo-bg__shape {
-  opacity: 0.65;
-  width: 48%;
+  opacity: 0.5;
+  width: 47.5%;
   height: 48%;
-  border-radius: 0 6rem 6rem 0;
-  background-image: linear-gradient(85deg, hsl(0deg, 0%, 59%) 0%, hsl(137deg, 0%, 55%) 18%, hsl(137deg, 0%, 52%) 27%, hsl(137deg, 0%, 49%) 34%, hsl(137deg, 0%, 45%) 40%, hsl(137deg, 0%, 42%) 46%, hsl(137deg, 0%, 39%) 52%, hsl(137deg, 0%, 36%) 58%, hsl(137deg, 0%, 33%) 63%, hsl(137deg, 0%, 30%) 70%, hsl(137deg, 0%, 27%) 76%, hsl(137deg, 0%, 24%) 84%, hsl(0deg, 0%, 21%) 100%);
+  border-radius: 0 55vw 55vw 0;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%);
 }
 .hero .logo-bg__container .logo-bg__shape-1 {
   bottom: 0;
@@ -638,96 +622,39 @@ body {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
+  font-family: "Ribes";
+  text-transform: uppercase;
 }
-@media (min-width: 1250px) {
-  .hero__name {
-    top: 45%;
-  }
+.hero__name .hero__intro {
+  color: #7692FF;
+  line-height: 1.1;
+  font-size: 2rem;
+  position: relative;
+  top: 2rem;
+  right: 5.6rem;
 }
 .hero__name .hero__firstname {
-  font-family: "Ribes";
-  text-transform: uppercase;
-  font-size: 22.5vw;
-}
-@media (min-width: 810px) {
-  .hero__name .hero__firstname {
-    font-size: 19vw;
-  }
-}
-@media (min-width: 1250px) {
-  .hero__name .hero__firstname {
-    font-size: 13.5rem;
-  }
-}
-@media (min-width: 1920px) {
-  .hero__name .hero__firstname {
-    font-size: 17rem;
-  }
+  font-size: 6rem;
 }
 .hero__name .hero__lastname {
-  font-family: "ClashDisplay";
-  font-weight: 200;
-  font-size: 10vw;
-  position: absolute;
-  bottom: -15%;
-}
-@media (min-width: 810px) {
-  .hero__name .hero__lastname {
-    bottom: -10%;
-    font-size: 8vw;
-  }
-}
-@media (min-width: 1250px) {
-  .hero__name .hero__lastname {
-    bottom: -12.5%;
-    font-size: 6rem;
-  }
-}
-@media (min-width: 1920px) {
-  .hero__name .hero__lastname {
-    font-size: 8rem;
-    bottom: -12.5%;
-  }
+  font-size: 2.25rem;
+  position: relative;
+  bottom: 2.25rem;
 }
 .hero .hero__function {
-  position: absolute;
-  font-family: "Ribes";
-  color: #7692FF;
-  line-height: 1;
-  text-transform: uppercase;
-  text-align: center;
-  bottom: 2rem;
-  font-size: 7vw;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: end;
-}
-.hero .hero__function span {
+  align-items: center;
+  position: absolute;
+  font-family: "Ribes";
+  text-transform: uppercase;
+  text-align: center;
+  bottom: 1rem;
+  font-size: 1.5rem;
   width: 100%;
-}
-@media (min-width: 414px) {
-  .hero .hero__function {
-    font-size: 6.5vw;
-  }
-}
-@media (min-width: 810px) {
-  .hero .hero__function {
-    font-size: 5vw;
-  }
-}
-@media (min-width: 1250px) {
-  .hero .hero__function {
-    font-size: 3.5rem;
-  }
-}
-@media (min-width: 1920px) {
-  .hero .hero__function {
-    font-size: 4.5rem;
-  }
 }
 
 .nav-mobile {

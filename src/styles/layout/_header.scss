@@ -23,7 +23,7 @@
     &__logo {
         
         img {
-            width: $size;
+            width: $size * 1.25;
 
             @include screen-xl {
                 width: 3.5rem;
