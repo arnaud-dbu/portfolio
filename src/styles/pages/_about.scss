@@ -59,28 +59,28 @@
 }
 
 .skills {
-    
+
     .skills__bg {
-        
-        background: rgb(167, 167, 167);
-        background: linear-gradient(90deg, rgba(167, 167, 167, 0.231) 0%, rgba(177, 177, 177, 0.203) 35%, rgba(137, 137, 137, 0.154) 100%);
-        
+        background: rgba(101, 101, 101, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
         @include screen-md {
-            border-radius: 0 11rem 11rem 0;
             // border-radius: 10rem;
         }
-        
-        
-    
-    
-    .skills__content {
-        
-        @include flex-column;
-        padding-top: 2rem;
+
+
+
+
+        .skills__content {
+
+            @include flex-column;
+            padding-top: 2rem;
 
             gap: 3rem;
             position: relative;
-            
+
             @include screen-md {
                 align-items: flex-start;
                 width: 100%;
@@ -91,33 +91,33 @@
             @include screen-lg {
                 // padding-top: 0;
             }
-            
-            
+
+
             .skill {
                 @include flex-column-center;
                 gap: 0.5rem;
-                
+
                 @include screen-md {
                     flex-direction: row;
                     gap: 1.5rem;
                 }
-                
+
                 &__icon {
                     width: 5rem;
                     fill: $color-tertiary;
-    
+
                     @include screen-md {
                         width: 5rem;
                     }
                 }
-                
+
                 &__title {
                     font-size: 1.65rem;
-    
+
                     @include screen-md {
                         font-size: 2rem;
                     }
-    
+
                     @include screen-lg {
                         // font-size: 2.5rem;
                     }

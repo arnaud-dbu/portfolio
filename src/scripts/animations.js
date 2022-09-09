@@ -10,6 +10,7 @@ const animations = {
 
   },
   generateUI() {
+    this.animateBg();
     this.animateHero();
     this.animateTitles();
     this.animateAbout();
@@ -19,6 +20,29 @@ const animations = {
     // isMedium: '(min-width: 810px)',
     // isLarge: 'min-width: 1250px)',
     // isExtraLarge: '(min-width: 1920px)',
+  },
+  animateBg() {
+    gsap.to('.logo-bg', {
+      opacity: 0.25,
+      scrollTrigger: 
+      {
+        trigger: ".about__title",
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
+      }
+    })
+
+    gsap.to('.logo-bg', {
+      opacity: 0,
+      scrollTrigger: 
+      {
+        trigger: ".projects__title",
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
+      }
+    })
   },
   animateHero() {
 

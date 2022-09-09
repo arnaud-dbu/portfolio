@@ -116,7 +116,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
-@media (min-width: 414px) {
+@media (min-width: 600px) {
   .title-primary {
     font-size: 4.25rem;
   }
@@ -530,6 +530,67 @@ body {
   }
 }
 
+.logo-bg {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  overflow-x: hidden;
+}
+.logo-bg .logo-bg__container {
+  width: 140vw;
+  height: 200vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.75;
+}
+@media (min-width: 600px) {
+  .logo-bg .logo-bg__container {
+    width: 122.5vw;
+    height: 175vw;
+  }
+}
+@media (min-width: 1250px) {
+  .logo-bg .logo-bg__container {
+    width: 56vw;
+    height: 80vw;
+  }
+}
+@media (min-width: 1920px) {
+  .logo-bg .logo-bg__container {
+    width: 56vw;
+    height: 80vw;
+  }
+}
+.logo-bg .logo-bg__container .logo-bg__shapes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape {
+  opacity: 0.5;
+  width: 47.5%;
+  height: 48%;
+  border-radius: 0 55vw 55vw 0;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%);
+}
+.logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape-1 {
+  bottom: 0;
+  position: absolute;
+}
+.logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape-2 {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape-3 {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
 .hero {
   height: 100vh;
   width: 100vw;
@@ -540,45 +601,9 @@ body {
 @media (min-width: 1250px) {
   .hero {
     height: 100vh;
+    width: calc(100vw - 2rem);
     padding: 2rem;
   }
-}
-.hero .logo-bg {
-  width: 140vw;
-  height: 200vw;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  overflow-x: hidden;
-  opacity: 0.75;
-}
-.hero .logo-bg__container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.hero .logo-bg__container .logo-bg__shape {
-  opacity: 0.5;
-  width: 47.5%;
-  height: 48%;
-  border-radius: 0 55vw 55vw 0;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%);
-}
-.hero .logo-bg__container .logo-bg__shape-1 {
-  bottom: 0;
-  position: absolute;
-}
-.hero .logo-bg__container .logo-bg__shape-2 {
-  top: 0;
-  right: 0;
-  position: absolute;
-}
-.hero .logo-bg__container .logo-bg__shape-3 {
-  bottom: 0;
-  right: 0;
-  position: absolute;
 }
 .hero__shapes {
   display: flex;
@@ -596,7 +621,7 @@ body {
   width: 1000vw;
   z-index: -1;
 }
-@media (min-width: 414px) {
+@media (min-width: 600px) {
   .hero__bg {
     width: 700vw;
   }
@@ -626,23 +651,101 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   font-family: "Ribes";
+  width: 100%;
   text-transform: uppercase;
 }
-.hero__name .hero__intro {
+.hero__name .hero__name-content {
+  position: relative;
+}
+.hero__name .hero__name-content .hero__intro {
   color: #7692FF;
-  line-height: 1.1;
-  font-size: 2rem;
-  position: relative;
-  top: 2rem;
-  right: 5.6rem;
+  line-height: 1.25;
+  position: absolute;
+  font-size: 6.5vw;
+  top: -15%;
+  left: 15%;
+  line-height: 1;
 }
-.hero__name .hero__firstname {
-  font-size: 6rem;
+@media (min-width: 600px) {
+  .hero__name .hero__name-content .hero__intro {
+    font-size: 5.5vw;
+    top: -10%;
+  }
 }
-.hero__name .hero__lastname {
-  font-size: 2.25rem;
-  position: relative;
-  bottom: 2.25rem;
+@media (min-width: 810px) {
+  .hero__name .hero__name-content .hero__intro {
+    font-size: 3rem;
+    top: -10%;
+  }
+}
+@media (min-width: 1250px) {
+  .hero__name .hero__name-content .hero__intro {
+    font-size: 3rem;
+    top: -5%;
+  }
+}
+@media (min-width: 1920px) {
+  .hero__name .hero__name-content .hero__intro {
+    font-size: 4rem;
+    top: -10%;
+  }
+}
+.hero__name .hero__name-content .hero__firstname {
+  font-size: 23vw;
+}
+@media (min-width: 600px) {
+  .hero__name .hero__name-content .hero__firstname {
+    font-size: 22vw;
+  }
+}
+@media (min-width: 810px) {
+  .hero__name .hero__name-content .hero__firstname {
+    font-size: 12rem;
+  }
+}
+@media (min-width: 1250px) {
+  .hero__name .hero__name-content .hero__firstname {
+    font-size: 14rem;
+  }
+}
+@media (min-width: 1920px) {
+  .hero__name .hero__name-content .hero__firstname {
+    font-size: 16rem;
+  }
+}
+.hero__name .hero__name-content .hero__lastname {
+  font-size: 6.5vw;
+  position: absolute;
+  bottom: -7.5%;
+  right: 15%;
+  font-family: "ClashDisplay";
+}
+@media (min-width: 600px) {
+  .hero__name .hero__name-content .hero__lastname {
+    font-size: 5.5vw;
+    bottom: -2.5%;
+  }
+}
+@media (min-width: 810px) {
+  .hero__name .hero__name-content .hero__lastname {
+    font-size: 3rem;
+    bottom: 0%;
+    right: 15%;
+  }
+}
+@media (min-width: 1250px) {
+  .hero__name .hero__name-content .hero__lastname {
+    font-size: 3rem;
+    bottom: 2.5%;
+    right: 15%;
+  }
+}
+@media (min-width: 1920px) {
+  .hero__name .hero__name-content .hero__lastname {
+    font-size: 4rem;
+    bottom: -2.5%;
+    right: 15%;
+  }
 }
 .hero .hero__function {
   display: flex;
@@ -653,8 +756,31 @@ body {
   text-transform: uppercase;
   text-align: center;
   bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 6vw;
+  line-height: 1.25;
   width: 100%;
+}
+@media (min-width: 600px) {
+  .hero .hero__function {
+    font-size: 5vw;
+  }
+}
+@media (min-width: 810px) {
+  .hero .hero__function {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 810px) {
+  .hero .hero__function {
+    font-size: 2.5rem;
+    bottom: 2rem;
+  }
+}
+@media (min-width: 810px) {
+  .hero .hero__function {
+    font-size: 3rem;
+    bottom: 2rem;
+  }
 }
 
 .nav-mobile {
@@ -745,13 +871,10 @@ body {
 }
 
 .skills .skills__bg {
-  background: rgb(167, 167, 167);
-  background: linear-gradient(90deg, rgba(167, 167, 167, 0.231) 0%, rgba(177, 177, 177, 0.203) 35%, rgba(137, 137, 137, 0.154) 100%);
-}
-@media (min-width: 810px) {
-  .skills .skills__bg {
-    border-radius: 0 11rem 11rem 0;
-  }
+  background: rgba(101, 101, 101, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .skills .skills__bg .skills__content {
   display: flex;

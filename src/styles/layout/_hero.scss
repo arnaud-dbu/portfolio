@@ -1,48 +1,57 @@
 @use '../utils/variables'as *;
 @use '../utils/mixins'as *;
 
-.hero {
-    height: 100vh;
+.logo-bg {
+
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    // overflow-x: hidden;
-    
-    @include screen-lg {
-        height: 100vh;
-        padding: 2rem;
-    }
-    
-    
-    .logo-bg {  
+    height: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    // @include screen-md {
+    //     $size: 1.35rem;
+    //     width: 37.5 * $size;
+    //     height: 45 * $size;
+
+    // }
+
+    // @include screen-lg {
+    //     $size: 1.6rem;
+    //     width: 37.5 * $size;
+    //     height: 45 * $size;
+    // }
+
+    // @include screen-xl {
+    //     $size: 2rem;
+    //     width: 37.5 * $size;
+    //     height: 45 * $size;
+    // }
+
+    .logo-bg__container {
         $size: 20vw;
         width: 7*$size;
         height: 10*$size;
         @include center;
-        overflow-x: hidden;
         opacity: .75;
-        
-        // @include screen-md {
-        //     $size: 1.35rem;
-        //     width: 37.5 * $size;
-        //     height: 45 * $size;
 
-        // }
-        
-        // @include screen-lg {
-        //     $size: 1.6rem;
-        //     width: 37.5 * $size;
-        //     height: 45 * $size;
-        // }
-        
-        // @include screen-xl {
-        //     $size: 2rem;
-        //     width: 37.5 * $size;
-        //     height: 45 * $size;
-        // }
+        @include screen-sm {
+            $size: 17.5vw;
+            width: 7*$size;
+            height: 10*$size;
+        }
 
-        &__container {
+        @include screen-lg {
+            $size: 8vw;
+            width: 7*$size;
+            height: 10*$size;
+        }
+
+        @include screen-xl {
+            $size: 8vw;
+            width: 7*$size;
+            height: 10*$size;
+        }
+
+        .logo-bg__shapes {
             position: relative;
             width: 100%;
             height: 100%;
@@ -52,21 +61,21 @@
                 width: 47.5%;
                 height: 48%;
                 border-radius: 0 55vw 55vw 0;
-                background: rgb(255,255,255);
-                background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+                background: rgb(255, 255, 255);
+                background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
             }
-            
+
             .logo-bg__shape-1 {
                 bottom: 0;
                 position: absolute;
             }
-            
+
             .logo-bg__shape-2 {
                 top: 0;
                 right: 0;
                 position: absolute;
             }
-            
+
             .logo-bg__shape-3 {
                 bottom: 0;
                 right: 0;
@@ -74,6 +83,23 @@
             }
         }
     }
+}
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    // overflow-x: hidden;
+
+    @include screen-lg {
+        height: 100vh;
+        width: calc(100vw - 2rem);
+        padding: 2rem;
+    }
+
+
 
     &__shapes {
         display: flex;
@@ -196,26 +222,94 @@
         @include flex-column-center;
         @include center;
         font-family: $font-secondary;
+        width: 100%;
         text-transform: uppercase;
 
-        .hero__intro {
-            color: $color-tertiary;
-            line-height: 1.1;
-            font-size: 2rem;
+        .hero__name-content {
             position: relative;
-            top: 2rem;
-            right: 5.6rem;
-        }
 
-        .hero__firstname {
-            font-size: 6rem;
-        }
+            .hero__intro {
+                color: $color-tertiary;
+                line-height: 1.25;
+                position: absolute;
+                font-size: 6.5vw;
+                top: -15%;
+                left: 15%;
+                line-height: 1;
 
-        .hero__lastname {
-            font-size: 2.25rem;
-            position: relative;
-            bottom: 2.25rem;
-        
+                @include screen-sm {
+                    font-size: 5.5vw;
+                    top: -10%;
+                }
+
+                @include screen-md {
+                    font-size: 3rem;
+                    top: -10%;
+                }
+
+                @include screen-lg {
+                    font-size: 3rem;
+                    top: -5%;
+                }
+
+                @include screen-xl {
+                    font-size: 4rem;
+                    top: -10%;
+                }
+            }
+
+            .hero__firstname {
+                font-size: 23vw;
+
+                @include screen-sm {
+                    font-size: 22vw;
+                }
+
+                @include screen-md {
+                    font-size: 12rem;
+                }
+
+                @include screen-lg {
+                    font-size: 14rem;
+                }
+
+                @include screen-xl {
+                    font-size: 16rem;
+                }
+            }
+
+            .hero__lastname {
+                font-size: 6.5vw;
+                position: absolute;
+                bottom: -7.5%;
+                right: 15%;
+                font-family: $font-primary;
+                // font-weight: 300;
+
+                @include screen-sm {
+                    font-size: 5.5vw;
+                    bottom: -2.5%;
+                }
+
+                @include screen-md {
+                    font-size: 3rem;
+                    bottom: 0%;
+                    right: 15%;
+                }
+
+                @include screen-lg {
+                    font-size: 3rem;
+                    bottom: 2.5%;
+                    right: 15%;
+                }
+
+                @include screen-xl {
+                    font-size: 4rem;
+                    bottom: -2.5%;
+                    right: 15%;
+                }
+
+            }
         }
     }
 
@@ -226,7 +320,26 @@
         text-transform: uppercase;
         text-align: center;
         bottom: 1rem;
-        font-size: 1.5rem;
-        width: 100%;    
+        font-size: 6vw;
+        line-height: 1.25;
+        width: 100%;
+
+        @include screen-sm {
+            font-size: 5vw;
+        }
+
+        @include screen-md {
+            font-size: 2.5rem;
+        }
+
+        @include screen-md {
+            font-size: 2.5rem;
+            bottom: 2rem;
+        }
+
+        @include screen-md {
+            font-size: 3rem;
+            bottom: 2rem;
+        }
     }
 }
