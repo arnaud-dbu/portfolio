@@ -6085,6 +6085,14 @@
 
   // src/scripts/main.js
   gsapWithCSS.registerPlugin(ScrollTrigger2);
+  var setHeight = () => {
+    document.querySelector(".hero").style.minHeight = window.innerHeight + "px";
+  };
+  var deviceWidth = window.matchMedia("(max-width: 1024px)");
+  if (deviceWidth.matches) {
+    window.addEventListener("resize", setHeight);
+    setHeight();
+  }
 })();
 /*!
  * CSSPlugin 3.10.4
