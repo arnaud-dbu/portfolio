@@ -85,14 +85,8 @@
     }
 }
 
-html {
-    height: -webkit-fill-available; //  WebKit-based browsers
-}
-
 .hero {
-    height: 100vh;
-    // height: -moz-available;  // Mozilla-based browsers
-    height: -webkit-fill-available; //  WebKit-based browsers
+    height: 95vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
