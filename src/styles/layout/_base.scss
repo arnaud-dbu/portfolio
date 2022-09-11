@@ -1,5 +1,7 @@
 @use '../utils/variables' as *;
 
+$doc-height: 100%;
+
 body {
     color: $color-secondary;  
     background-color: $color-primary;
@@ -8,6 +10,8 @@ body {
     line-height: 1.5;
     font-size: 1.35rem;
     margin: 0;
+    height: 100vh; /* fallback for Js load */
+    height: $doc-height;
 }
 
 

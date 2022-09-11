@@ -357,6 +357,9 @@ body {
   line-height: 1.5;
   font-size: 1.35rem;
   margin: 0;
+  height: 100vh;
+  /* fallback for Js load */
+  height: 100%;
 }
 
 .overflow-hidden {

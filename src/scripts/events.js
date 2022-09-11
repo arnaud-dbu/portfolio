@@ -1,6 +1,7 @@
 const events = {
   init() {
     this.cacheElements();
+    this.setHeight();
     this.generateUI();
   },
   cacheElements() {
@@ -45,6 +46,14 @@ const events = {
         this.$mobileNav.classList.add('js-hidden');
       }) 
     });
+  }, 
+  setHeight() {
+    const documentHeight = () => {
+      const doc = document.documentElement
+      doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+     }
+     window.addEventListener('resize', documentHeight)
+     documentHeight()
   }
 }
 
