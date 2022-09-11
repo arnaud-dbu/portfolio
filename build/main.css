@@ -349,10 +349,6 @@ p {
   }
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
 body {
   color: #EDF2EF;
   background-color: #232222;
@@ -361,8 +357,6 @@ body {
   line-height: 1.5;
   font-size: 1.35rem;
   margin: 0;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
 }
 
 .overflow-hidden {
@@ -599,6 +593,9 @@ body {
 
 .hero {
   height: 100vh;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   width: 100vw;
   display: flex;
   flex-direction: column;
