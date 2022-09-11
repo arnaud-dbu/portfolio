@@ -18,25 +18,25 @@ const events = {
       ev.preventDefault();
       await this.$mobileNav.classList.remove('js-hidden');
 
-      await gsap.set('.nav-mobile', {
-        y: '-100vh'
-      })
+      // await gsap.set('.nav-mobile', {
+      //   y: '-100vh'
+      // })
       
-      await gsap.to('.nav-mobile', {
-        y: '0',
-        duration: .5,
-        ease: "power4.out"
-      })
+      // await gsap.to('.nav-mobile', {
+      //   y: '0',
+      //   duration: .5,
+      //   ease: "power4.out"
+      // })
     });
     
     this.$mobileNavCloseBtn.addEventListener('click', async (ev) => {
       ev.preventDefault();
 
-      await gsap.to('.nav-mobile', {
-        y: '-100vh',
-        duration: .5,
-        ease: "power4.in"
-      })
+      // await gsap.to('.nav-mobile', {
+      //   y: '-100vh',
+      //   duration: .5,
+      //   ease: "power4.in"
+      // })
 
       await this.$mobileNav.classList.add('js-hidden');
     })

@@ -100,7 +100,7 @@ a {
 
 .title-primary {
   font-family: "Ribes";
-  font-size: 4rem;
+  font-size: 15vw;
   text-transform: uppercase;
   text-align: center;
   position: relative;
@@ -375,6 +375,10 @@ body {
   box-shadow: 0px 1px 10px -4px #7692FF;
 }
 
+.text-shadow {
+  text-shadow: 1px 1px 10px rgba(35, 34, 34, 0.5215686275);
+}
+
 .js-hidden {
   display: none;
 }
@@ -436,24 +440,8 @@ body {
   }
 }
 @media (min-width: 1250px) {
-  .header__nav--dekstop li a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    border-radius: 4px;
-    background-color: #7692FF;
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-  }
-}
-@media (min-width: 1250px) {
-  .header__nav--dekstop li a:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
+  .header__nav--dekstop li a:hover {
+    color: #7692FF;
   }
 }
 .header__socials {
@@ -465,9 +453,6 @@ body {
   background-color: #232222;
   border-radius: 50%;
   cursor: pointer;
-}
-.header__socials li path {
-  transition: all 0.3s ease-out;
 }
 .header__socials li:hover path {
   fill: #7692FF;
@@ -496,7 +481,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2vw;
 }
 @media (min-width: 810px) {
   .footer__content {
@@ -504,8 +489,8 @@ body {
   }
 }
 .footer__content .footer__bullet {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 2vw;
+  height: 2vw;
   border: 1.5px solid #232222;
   border-radius: 50%;
 }
@@ -517,12 +502,27 @@ body {
   font-family: "ClashDisplay";
   font-weight: 300;
   color: #232222;
-  font-size: 1.3rem;
+  font-size: 5vw;
+}
+.footer__content .footer__item a:hover {
+  color: #7692FF;
 }
 @media (min-width: 810px) {
   .footer__content .footer__item a {
     font-size: 2rem;
   }
+}
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.footer__socials li a svg:hover path {
+  fill: #7692FF;
+}
+.footer__socials path {
+  fill: #232222;
 }
 @media (min-width: 1250px) {
   .footer {
@@ -535,6 +535,7 @@ body {
   height: 100%;
   position: fixed;
   overflow-x: hidden;
+  z-index: -1;
 }
 .logo-bg .logo-bg__container {
   width: 140vw;
@@ -643,6 +644,7 @@ body {
   }
 }
 .hero__name {
+  font-family: "Ribes";
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -650,7 +652,6 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-family: "Ribes";
   width: 100%;
   text-transform: uppercase;
 }
@@ -718,6 +719,7 @@ body {
   position: absolute;
   bottom: -7.5%;
   right: 15%;
+  text-transform: capitalize;
   font-family: "ClashDisplay";
 }
 @media (min-width: 600px) {
@@ -743,7 +745,7 @@ body {
 @media (min-width: 1920px) {
   .hero__name .hero__name-content .hero__lastname {
     font-size: 4rem;
-    bottom: -2.5%;
+    bottom: -1%;
     right: 15%;
   }
 }
@@ -856,15 +858,17 @@ body {
     font-size: 1.5rem;
   }
 }
-.about__content .about__img {
+.about__content .about__img-container {
+  order: -1;
+}
+.about__content .about__img-container .about__img {
   object-fit: cover;
-  width: 15rem;
-  height: 15rem;
-  filter: grayscale(50%);
+  width: 10rem;
+  height: 10rem;
+  box-shadow: 1px 1px 8px 0px #232222;
 }
 @media (min-width: 810px) {
-  .about__content .about__img {
-    order: -1;
+  .about__content .about__img-container .about__img {
     width: 13.5rem;
     height: 13.5rem;
   }
@@ -914,6 +918,8 @@ body {
 }
 .skills .skills__bg .skills__content .skill__title {
   font-size: 1.65rem;
+  text-align: center;
+  padding: 0 1rem;
 }
 @media (min-width: 810px) {
   .skills .skills__bg .skills__content .skill__title {

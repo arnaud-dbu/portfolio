@@ -46,43 +46,25 @@ const animations = {
   },
   animateHero() {
 
-    let mm = gsap.matchMedia();
+    // let mm = gsap.matchMedia();
 
-    mm.add('(min-width: 1250px)', () => {
+    // mm.add('(min-width: 1250px)', () => {
 
-      gsap.from('header', {
-        x: "-20vw",
-        duration: 1,
-        ease: "power4.out"
-      })
-    })
-
-    // gsap.to('.hero', {
-    //   opacity: 0,
-    //   scrollTrigger: {
-    //     end: 'bottom 20%',
-    //     trigger: '.title',
-    //     scrub: true
-    //   }
+    //   gsap.from('header', {
+    //     x: "-20vw",
+    //     duration: 1,
+    //     ease: "power4.out"
+    //   })
     // })
 
-    gsap.from('.hero__shapes', {
+    const tl = gsap.timeline({});
+
+    tl.from('.logo-bg__shape', {
       opacity: 0,
-      duration: 15,
-      ease: "power4.out"
+      duration: 10,
+      ease: "power3.out"
     })
 
-    gsap.from('.hero__firstname', {
-      duration: 2.5,
-      opacity: 0,
-      ease: "power1.out"
-    })
-
-    gsap.from('.hero__lastname', {
-      duration: 2.5,
-      opacity: 0,
-      ease: "power1.out"
-    })
   },
   animateTitles() {
     const $primaryTitles = document.querySelectorAll('.title-primary');

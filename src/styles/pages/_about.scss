@@ -6,7 +6,6 @@
     &__content {
 
         @include flex-column-center;
-        $size: 15rem;
 
         @include screen-md {
             flex-direction: row;
@@ -43,18 +42,25 @@
             }
         }
 
-        .about__img {
-            object-fit: cover;
-            width: $size;
-            height: $size;
-            filter: grayscale(50%);
+        .about__img-container {
+            order: -1;
 
-            @include screen-md {
-                order: -1;
-                width: 13.5rem;
-                height: 13.5rem;
+            .about__img {
+                object-fit: cover;
+                $size: 10rem;
+                width: $size;
+                height: $size;
+                box-shadow: 1px 1px 8px 0px #232222;
+
+                @include screen-md {
+                    width: 13.5rem;
+                    height: 13.5rem;
+                }
             }
+
+
         }
+
     }
 }
 
@@ -113,6 +119,8 @@
 
                 &__title {
                     font-size: 1.65rem;
+                    text-align: center;
+                    padding: 0 1rem;
 
                     @include screen-md {
                         font-size: 2rem;

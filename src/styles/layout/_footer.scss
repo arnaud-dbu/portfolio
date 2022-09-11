@@ -1,5 +1,5 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+@use '../utils/variables'as *;
+@use '../utils/mixins'as *;
 
 .footer {
     background-color: $color-secondary;
@@ -7,15 +7,16 @@
     &__content {
 
         @include flex-row-center;
-        gap: 0.5rem;
-        
+        gap: 2vw;
+
         @include screen-md {
             gap: 1rem;
         }
 
         .footer__bullet {
-            width: 0.75rem;
-            height: 0.75rem;
+            $size: 2vw;
+            width: $size;
+            height: $size;
             border: 1.5px solid $color-primary;
             border-radius: 50%;
         }
@@ -28,15 +29,39 @@
                 font-family: $font-primary;
                 font-weight: 300;
                 color: $color-primary;
-                font-size: 1.3rem;
-                
+                font-size: 5vw;
+
+                &:hover {
+                    color: $color-tertiary;
+                } 
+
                 @include screen-md {
                     font-size: 2rem;
                 }
             }
         }
     }
-    
+
+    &__socials {
+        @include flex-row-center;
+        gap: 1rem;
+
+        li {
+            a {
+                svg {
+                    &:hover path {
+                        fill: $color-tertiary;
+                    }
+
+                }
+            }
+        }
+
+        path {
+            fill: $color-primary;
+        }
+    }
+
     @include screen-lg {
         display: none;
     }

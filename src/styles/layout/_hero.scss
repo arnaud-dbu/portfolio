@@ -7,6 +7,7 @@
     height: 100%;
     position: fixed;
     overflow-x: hidden;
+    z-index: -1;
     // @include screen-md {
     //     $size: 1.35rem;
     //     width: 37.5 * $size;
@@ -219,9 +220,9 @@
     }
 
     &__name {
+        font-family: $font-secondary;
         @include flex-column-center;
         @include center;
-        font-family: $font-secondary;
         width: 100%;
         text-transform: uppercase;
 
@@ -260,6 +261,7 @@
 
             .hero__firstname {
                 font-size: 23vw;
+                
 
                 @include screen-sm {
                     font-size: 22vw;
@@ -283,7 +285,7 @@
                 position: absolute;
                 bottom: -7.5%;
                 right: 15%;
-                // text-transform: capitalize;
+                text-transform: capitalize;
                 font-family: $font-primary;
                 // font-weight: 300;
 
@@ -306,7 +308,7 @@
 
                 @include screen-xl {
                     font-size: 4rem;
-                    bottom: -2.5%;
+                    bottom: -1%;
                     right: 15%;
                 }
 

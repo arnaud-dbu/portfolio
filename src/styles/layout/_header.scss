@@ -59,26 +59,30 @@
                     @include screen-xl {
                         font-size: 1.75rem;
                     }
+
+                    &:hover {
+                        color: $color-tertiary;
+                    }
                 }
 
-                a::before {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    border-radius: 4px;
-                    background-color: $color-tertiary;
-                    bottom: 0;
-                    left: 0;
-                    transform-origin: right;
-                    transform: scaleX(0);
-                    transition: transform .3s ease-in-out;
-                }
+                // a::before {
+                //     content: '';
+                //     position: absolute;
+                //     width: 100%;
+                //     height: 2px;
+                //     border-radius: 4px;
+                //     background-color: $color-tertiary;
+                //     bottom: 0;
+                //     left: 0;
+                //     transform-origin: right;
+                //     transform: scaleX(0);
+                //     transition: transform .3s ease-in-out;
+                // }
 
-                a:hover::before {
-                    transform-origin: left;
-                    transform: scaleX(1);
-                }
+                // a:hover::before {
+                //     transform-origin: left;
+                //     transform: scaleX(1);
+                // }
 
             }
         }
@@ -94,9 +98,9 @@
             border-radius: 50%;
             cursor: pointer;
 
-            path {
-                transition: all .3s ease-out;
-            }
+            // path {
+            //     transition: all .3s ease-out;
+            // }
 
             &:hover path {
                 fill: $color-tertiary;

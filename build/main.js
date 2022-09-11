@@ -40,22 +40,9 @@
           this.$hamburgerBtn.addEventListener("click", async (ev) => {
             ev.preventDefault();
             await this.$mobileNav.classList.remove("js-hidden");
-            await gsap.set(".nav-mobile", {
-              y: "-100vh"
-            });
-            await gsap.to(".nav-mobile", {
-              y: "0",
-              duration: 0.5,
-              ease: "power4.out"
-            });
           });
           this.$mobileNavCloseBtn.addEventListener("click", async (ev) => {
             ev.preventDefault();
-            await gsap.to(".nav-mobile", {
-              y: "-100vh",
-              duration: 0.5,
-              ease: "power4.in"
-            });
             await this.$mobileNav.classList.add("js-hidden");
           });
           this.$mobileNavLink.forEach((link) => {
@@ -118,28 +105,11 @@
           });
         },
         animateHero() {
-          let mm = gsap.matchMedia();
-          mm.add("(min-width: 1250px)", () => {
-            gsap.from("header", {
-              x: "-20vw",
-              duration: 1,
-              ease: "power4.out"
-            });
-          });
-          gsap.from(".hero__shapes", {
+          const tl = gsap.timeline({});
+          tl.from(".logo-bg__shape", {
             opacity: 0,
-            duration: 15,
-            ease: "power4.out"
-          });
-          gsap.from(".hero__firstname", {
-            duration: 2.5,
-            opacity: 0,
-            ease: "power1.out"
-          });
-          gsap.from(".hero__lastname", {
-            duration: 2.5,
-            opacity: 0,
-            ease: "power1.out"
+            duration: 10,
+            ease: "power3.out"
           });
         },
         animateTitles() {

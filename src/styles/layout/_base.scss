@@ -29,6 +29,10 @@ body {
     box-shadow: 0px 1px 10px -4px $color-tertiary;
 }
 
+.text-shadow {
+    text-shadow: 1px 1px 10px #23222285;
+}
+
 // JS
 
 .js-hidden {
