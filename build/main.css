@@ -591,11 +591,13 @@ body {
   position: absolute;
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 .hero {
   height: 100vh;
-  height: -moz-available;
   height: -webkit-fill-available;
-  height: fill-available;
   width: 100vw;
   display: flex;
   flex-direction: column;
