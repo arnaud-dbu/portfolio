@@ -544,7 +544,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.75;
+  opacity: 1;
 }
 @media (min-width: 600px) {
   .logo-bg .logo-bg__container {
@@ -574,7 +574,7 @@ body {
   width: 47.5%;
   height: 48%;
   border-radius: 0 55vw 55vw 0;
-  background: linear-gradient(90deg, #232222 25%, #7691ff 200%);
+  background: linear-gradient(90deg, #232222 20%, #7691ff 300%);
 }
 .logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape-1 {
   bottom: 0;

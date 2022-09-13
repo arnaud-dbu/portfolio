@@ -14,7 +14,7 @@
         width: 7*$size;
         height: 10*$size;
         @include center;
-        opacity: .75;
+        opacity: 1;
 
         @include screen-sm {
             $size: 17.5vw;
@@ -44,7 +44,7 @@
                 width: 47.5%;
                 height: 48%;
                 border-radius: 0 55vw 55vw 0;
-                background: linear-gradient(90deg, #232222 25%, #7691ff 200%);
+                background: linear-gradient(90deg, #232222 20%, #7691ff 300%);
             }
 
 
