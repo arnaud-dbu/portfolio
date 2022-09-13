@@ -86,18 +86,9 @@
         },
         animateBg() {
           gsap.to(".logo-bg", {
-            opacity: 0.25,
-            scrollTrigger: {
-              trigger: ".about__title",
-              start: "top bottom",
-              end: "bottom top",
-              scrub: true
-            }
-          });
-          gsap.to(".logo-bg", {
             opacity: 0,
             scrollTrigger: {
-              trigger: ".projects__title",
+              trigger: ".about__title",
               start: "top bottom",
               end: "bottom top",
               scrub: true
@@ -108,7 +99,7 @@
           const tl = gsap.timeline({});
           tl.from(".logo-bg__shape", {
             opacity: 0,
-            duration: 10,
+            duration: 2,
             ease: "power3.out"
           });
         },

@@ -662,33 +662,33 @@ body {
   color: #7692FF;
   line-height: 1.25;
   position: absolute;
-  font-size: 6.5vw;
-  top: -15%;
+  font-size: 6vw;
+  top: -12.5%;
   left: 15%;
   line-height: 1;
 }
 @media (min-width: 600px) {
   .hero__name .hero__name-content .hero__intro {
-    font-size: 5.5vw;
-    top: -10%;
+    font-size: 5vw;
+    top: -7.5%;
   }
 }
 @media (min-width: 810px) {
   .hero__name .hero__name-content .hero__intro {
-    font-size: 3rem;
-    top: -10%;
+    font-size: 2.5rem;
+    top: -4%;
   }
 }
 @media (min-width: 1250px) {
   .hero__name .hero__name-content .hero__intro {
-    font-size: 3rem;
+    font-size: 2.5rem;
     top: -5%;
   }
 }
 @media (min-width: 1920px) {
   .hero__name .hero__name-content .hero__intro {
-    font-size: 4rem;
-    top: -10%;
+    font-size: 3.5rem;
+    top: -6%;
   }
 }
 .hero__name .hero__name-content .hero__firstname {
@@ -706,18 +706,18 @@ body {
 }
 @media (min-width: 1250px) {
   .hero__name .hero__name-content .hero__firstname {
-    font-size: 14rem;
+    font-size: 12rem;
   }
 }
 @media (min-width: 1920px) {
   .hero__name .hero__name-content .hero__firstname {
-    font-size: 16rem;
+    font-size: 15rem;
   }
 }
 .hero__name .hero__name-content .hero__lastname {
   font-size: 6.5vw;
   position: absolute;
-  bottom: -7.5%;
+  bottom: -5%;
   right: 15%;
   text-transform: capitalize;
   font-family: "ClashDisplay";
@@ -725,20 +725,20 @@ body {
 @media (min-width: 600px) {
   .hero__name .hero__name-content .hero__lastname {
     font-size: 5.5vw;
-    bottom: -2.5%;
+    bottom: 0%;
   }
 }
 @media (min-width: 810px) {
   .hero__name .hero__name-content .hero__lastname {
     font-size: 3rem;
-    bottom: 0%;
+    bottom: -1%;
     right: 15%;
   }
 }
 @media (min-width: 1250px) {
   .hero__name .hero__name-content .hero__lastname {
-    font-size: 3rem;
-    bottom: 2.5%;
+    font-size: 2.75rem;
+    bottom: 0%;
     right: 15%;
   }
 }
@@ -780,7 +780,7 @@ body {
 }
 @media (min-width: 810px) {
   .hero .hero__function {
-    font-size: 3rem;
+    font-size: 2.5rem;
     bottom: 2rem;
   }
 }
@@ -797,6 +797,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 92.5%;
   gap: 3rem;
   height: 100%;
 }
@@ -822,6 +823,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 7.5vh;
 }
 .nav-mobile .nav-mobile__content .nav-mobile__socials path {
   fill: #232222;

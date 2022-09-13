@@ -23,7 +23,7 @@ const animations = {
   },
   animateBg() {
     gsap.to('.logo-bg', {
-      opacity: 0.25,
+      opacity: 0,
       scrollTrigger: 
       {
         trigger: ".about__title",
@@ -33,16 +33,16 @@ const animations = {
       }
     })
 
-    gsap.to('.logo-bg', {
-      opacity: 0,
-      scrollTrigger: 
-      {
-        trigger: ".projects__title",
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true
-      }
-    })
+    // gsap.to('.logo-bg', {
+    //   opacity: 0,
+    //   scrollTrigger: 
+    //   {
+    //     trigger: ".projects__title",
+    //     start: 'top bottom',
+    //     end: 'bottom top',
+    //     scrub: true
+    //   }
+    // })
   },
   animateHero() {
 
@@ -61,7 +61,7 @@ const animations = {
 
     tl.from('.logo-bg__shape', {
       opacity: 0,
-      duration: 10,
+      duration: 2,
       ease: "power3.out"
     })
 

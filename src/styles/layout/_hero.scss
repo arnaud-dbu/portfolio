@@ -233,29 +233,29 @@
                 color: $color-tertiary;
                 line-height: 1.25;
                 position: absolute;
-                font-size: 6.5vw;
-                top: -15%;
+                font-size: 6vw;
+                top: -12.5%;
                 left: 15%;
                 line-height: 1;
 
                 @include screen-sm {
-                    font-size: 5.5vw;
-                    top: -10%;
+                    font-size: 5vw;
+                    top: -7.5%;
                 }
 
                 @include screen-md {
-                    font-size: 3rem;
-                    top: -10%;
+                    font-size: 2.5rem;
+                    top: -4%;
                 }
 
                 @include screen-lg {
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                     top: -5%;
                 }
 
                 @include screen-xl {
-                    font-size: 4rem;
-                    top: -10%;
+                    font-size: 3.5rem;
+                    top: -6%;
                 }
             }
 
@@ -272,18 +272,18 @@
                 }
 
                 @include screen-lg {
-                    font-size: 14rem;
+                    font-size: 12rem;
                 }
 
                 @include screen-xl {
-                    font-size: 16rem;
+                    font-size: 15rem;
                 }
             }
 
             .hero__lastname {
                 font-size: 6.5vw;
                 position: absolute;
-                bottom: -7.5%;
+                bottom: -5%;
                 right: 15%;
                 text-transform: capitalize;
                 font-family: $font-primary;
@@ -291,18 +291,18 @@
 
                 @include screen-sm {
                     font-size: 5.5vw;
-                    bottom: -2.5%;
+                    bottom: -0%;
                 }
 
                 @include screen-md {
                     font-size: 3rem;
-                    bottom: 0%;
+                    bottom: -1%;
                     right: 15%;
                 }
 
                 @include screen-lg {
-                    font-size: 3rem;
-                    bottom: 2.5%;
+                    font-size: 2.75rem;
+                    bottom: 0%;
                     right: 15%;
                 }
 
@@ -341,7 +341,7 @@
         }
 
         @include screen-md {
-            font-size: 3rem;
+            font-size: 2.5rem;
             bottom: 2rem;
         }
     }
