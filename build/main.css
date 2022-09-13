@@ -568,7 +568,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.4;
 }
 .logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape {
   width: 47.5%;
@@ -720,6 +720,7 @@ body {
   right: 15%;
   text-transform: capitalize;
   font-family: "ClashDisplay";
+  font-weight: 400;
 }
 @media (min-width: 600px) {
   .hero__name .hero__name-content .hero__lastname {

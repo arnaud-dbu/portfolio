@@ -38,7 +38,7 @@
             position: relative;
             width: 100%;
             height: 100%;
-            opacity: 0.8;
+            opacity: 0.4;
 
             .logo-bg__shape {
                 width: 47.5%;
@@ -184,6 +184,7 @@
                 right: 15%;
                 text-transform: capitalize;
                 font-family: $font-primary;
+                font-weight: 400;
 
                 @include screen-sm {
                     font-size: 5.5vw;
