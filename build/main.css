@@ -568,13 +568,13 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 1;
 }
 .logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape {
   width: 47.5%;
   height: 48%;
   border-radius: 0 55vw 55vw 0;
-  background: linear-gradient(90deg, #ffffff 25%, rgba(118, 145, 255, 0.4352941176) 110%);
+  background: linear-gradient(90deg, #232222 25%, #7691ff 200%);
 }
 .logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape-1 {
   bottom: 0;
@@ -720,7 +720,6 @@ body {
   right: 15%;
   text-transform: capitalize;
   font-family: "ClashDisplay";
-  font-weight: 400;
 }
 @media (min-width: 600px) {
   .hero__name .hero__name-content .hero__lastname {
