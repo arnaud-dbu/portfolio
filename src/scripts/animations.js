@@ -23,7 +23,7 @@ const animations = {
   },
   animateBg() {
     gsap.to('.logo-bg', {
-      opacity: 0,
+      opacity: 1,
       scrollTrigger: 
       {
         trigger: ".about__title",
@@ -59,11 +59,11 @@ const animations = {
 
     const tl = gsap.timeline({});
 
-    tl.from('.logo-bg__shape', {
-      opacity: 0,
-      duration: 2,
-      ease: "power3.out"
-    })
+    // tl.from('.logo-bg__shape', {
+    //   scale: 3,
+    //   duration: 4,
+    //   ease: "power3.out"
+    // })
 
   },
   animateTitles() {

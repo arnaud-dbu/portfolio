@@ -10,26 +10,32 @@
     z-index: -1;
 
     .logo-bg__container {
-        $size: 20vw;
+        $size: 25vw;
         width: 7*$size;
         height: 10*$size;
         @include center;
         opacity: 1;
 
         @include screen-sm {
-            $size: 17.5vw;
+            $size: 20vw;
+            width: 7*$size;
+            height: 10*$size;
+        }
+        
+        @include screen-md {            
+            $size: 15vw;
             width: 7*$size;
             height: 10*$size;
         }
 
         @include screen-lg {
-            $size: 8vw;
+            $size: 10vw;
             width: 7*$size;
             height: 10*$size;
         }
 
         @include screen-xl {
-            $size: 8vw;
+            $size: 9vw;
             width: 7*$size;
             height: 10*$size;
         }
@@ -49,7 +55,8 @@
 
 
             .logo-bg__shape-1 {
-                bottom: 0;
+                // bottom: 0;
+                @include center;
                 position: absolute;
             }
 

@@ -86,7 +86,7 @@
         },
         animateBg() {
           gsap.to(".logo-bg", {
-            opacity: 0,
+            opacity: 1,
             scrollTrigger: {
               trigger: ".about__title",
               start: "top bottom",
@@ -97,11 +97,6 @@
         },
         animateHero() {
           const tl = gsap.timeline({});
-          tl.from(".logo-bg__shape", {
-            opacity: 0,
-            duration: 2,
-            ease: "power3.out"
-          });
         },
         animateTitles() {
           const $primaryTitles = document.querySelectorAll(".title-primary");

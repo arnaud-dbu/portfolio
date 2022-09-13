@@ -538,8 +538,8 @@ body {
   z-index: -1;
 }
 .logo-bg .logo-bg__container {
-  width: 140vw;
-  height: 200vw;
+  width: 175vw;
+  height: 250vw;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -548,20 +548,26 @@ body {
 }
 @media (min-width: 600px) {
   .logo-bg .logo-bg__container {
-    width: 122.5vw;
-    height: 175vw;
+    width: 140vw;
+    height: 200vw;
+  }
+}
+@media (min-width: 810px) {
+  .logo-bg .logo-bg__container {
+    width: 105vw;
+    height: 150vw;
   }
 }
 @media (min-width: 1250px) {
   .logo-bg .logo-bg__container {
-    width: 56vw;
-    height: 80vw;
+    width: 70vw;
+    height: 100vw;
   }
 }
 @media (min-width: 1920px) {
   .logo-bg .logo-bg__container {
-    width: 56vw;
-    height: 80vw;
+    width: 63vw;
+    height: 90vw;
   }
 }
 .logo-bg .logo-bg__container .logo-bg__shapes {
@@ -577,7 +583,10 @@ body {
   background: linear-gradient(90deg, #232222 20%, #7691ff 300%);
 }
 .logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape-1 {
-  bottom: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
 }
 .logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape-2 {
