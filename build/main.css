@@ -568,14 +568,13 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  opacity: 0.7;
 }
 .logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape {
-  opacity: 0.5;
   width: 47.5%;
   height: 48%;
   border-radius: 0 55vw 55vw 0;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(90deg, #ffffff 25%, rgba(118, 145, 255, 0.4352941176) 110%);
 }
 .logo-bg .logo-bg__container .logo-bg__shapes .logo-bg__shape-1 {
   bottom: 0;
