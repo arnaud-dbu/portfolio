@@ -6,6 +6,10 @@
     .projects__content {           
         display: flex;
         flex-wrap: wrap;
+
+        @include screen-sm {
+            padding: 0;
+        }
     }
 
     .project {
@@ -14,10 +18,10 @@
         background-color: red;
         background-position: center;
         background-size: 150%;
-        filter: grayscale(60%);
+        filter: grayscale(50%);
         transition: all 1s ease;
         
-        @include screen-lg {
+        @include screen-md {
             width: 50%;
         }
         

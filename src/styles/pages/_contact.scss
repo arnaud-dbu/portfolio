@@ -26,21 +26,9 @@
     
     &__content {
         @include flex-column-center;
-        width: 100%;
-
-        .contact__title {
-            font-size: 4rem;
-            font-family: $font-secondary;
-        }
 
         @include screen-lg {
-
             padding: 3rem 0 3rem;
-            
-            .contact__title {
-                font-size: 5rem;
-                font-family: $font-secondary;
-            }
         }
     
         .contact__text {
@@ -55,7 +43,6 @@
         }
 
         .contact__btn {
-            margin-bottom: 1.5rem;
         }
     }
 }

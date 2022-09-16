@@ -10,13 +10,7 @@
 
 <body>
     <div class="logo-bg">
-        <div class="logo-bg__container">
-            <div class="logo-bg__shapes">
-                <div class="logo-bg__shape logo-bg__shape-1"></div>
-                <!-- <div class="logo-bg__shape logo-bg__shape-2"></div>
-                <div class="logo-bg__shape logo-bg__shape-3"></div> -->
-            </div>
-        </div>
+        <div class="logo-morph"></div>
     </div>
     <section class="hero ">
         <div class="nav-mobile p-sm js-hidden">
@@ -83,27 +77,24 @@
                 </li>
             </ul>
         </header>
-        <div class="hero__name ph-sm wrapper">
-            <div class="hero__name-content">
-                <span class="hero__intro">Hi, mijn<br/>naam is</span>
-                <span class="hero__firstname">Arnaud</span>
-                <span class="hero__lastname">De Burchgraeve</span>
-            </div>
-        </div>
-        <div class="hero__function">
-            <span>Front-end Developer</span>
-            <span>met liefde voor design</span>    
-        </div>        
+
+        <hero class="hero__content p-lg">
+            <span class="title title--primary">Hello, I'm Arnaud</span>
+            <span class="title title--primary title--primary-sm">a <em>developer</em> and <em>designer</em></span>
+            <p class="text-primary pv-xs pb-md">I design and code beautiful simple things, and I love what I do</p>
+            <button class="btn">Contact me</button>
+        </hero>
     </section>
     
-    <section id="about" class="about wrapper pt-xl">
-        <h2 class="about__title title-primary">Over mij</h2>
+    <section id="about" class="about wrapper">
+        <h2 class="about__title title title--secondary">About me</h2>
         <div class="about__content ph-lg">
             <div class="about__text text-center pb-md">
-                <p>Hoi, Ik ben Arnaud De Burchgraeve.</p> 
-                <p>Een front-end ontwikkelaar en grafische vormgever afkomstig uit Brussel.</p>
-                <p>Gedreven door passie bouw ik graag state-of the-art, gemakkelijk te gebruiken, gebruiksvriendelijke websites en applicaties.</p>
-                <p>Ik combineer daarbij een sterke technische ‘know-how’ met een oog voor esthetiek.  Een fraai design doet me opleven, dàt kunnen omzetten naar een functionele en responsieve web applicatie doet me helemaal zweven.</p>
+                <p>Hi, I’m Arnaud De Burchgraeve.</p> 
+                <p>A junior front-end developer who has a passion for graphic design.</p>
+                <p>In 2021, I’ve decided to take a first step in making my dream a reality by studying web development, with only one clear goal in mind: building state-of-the-art, user-friendly websites and applications.</p>
+                <p>I am a motivated, creative and problem-solving developer with hands-on skills in a wide range of development and design tools. This will allow me to create intuitive, dynamic user experiences.</p>
+                <p>In rare occasions when I’m not in front of my computer, you might find me in an attempt to climb a mountain, have a good time with my kids or eat cheese fondue.</p>
             </div>
             <div class="about__img-container pb-sm">
                 <img  class="about__img img-border-radius" src="./src/assets/images/portret.webp" alt="Portret Arnaud De Burchgraeve">
@@ -112,16 +103,16 @@
     </section>
 
     <section id="skills" class="skills p-lg">
-        <div class="skills__bg wrapper pv-lg">
-            <h2 class="skills__title title-secondary">Skills</h2>
-            <div class="skills__content wrapper pb-md">
+        <div class="skills__bg wrapper p-lg">
+            <h2 class="skills__title title title--secondary">Skills</h2>
+            <div class="skills__content pv-md wrapper">
                 <div class="skill">
                     <img src="./src/assets/SVG/graphic.svg" alt="Graphic Design" class="skill__icon">
                     <span class="skill__title">Graphic Design</span>
                 </div>
                 <div class="skill">
                     <img src="./src/assets/SVG/ui.svg" alt="User Interface Design" class="skill__icon">
-                    <span class="skill__title">User Interface Design</span>
+                    <span class="skill__title">UI Design</span>
                 </div>
                 <div class="skill">
                     <img src="./src/assets/SVG/front-end.svg" alt="Front-end Development" class="skill__icon">
@@ -132,8 +123,8 @@
     </section>
     
     <section id="projects" class="projects wrapper">
-        <h2 class="projects__title title-primary">Projecten</h2>
-        <ul class="projects__content wrapper">
+        <h2 class="projects__title title title--secondary">Projects</h2>
+        <ul class="projects__content ph-lg wrapper">
             <li class="project" style="background-image: url(./src/assets/images/luloop-2.webp);">
                     <a class="project__link" href="https://www.behance.net/gallery/151660791/Luloop" target="_blank">
                         <span class="project__title">Luloop</span>
@@ -168,16 +159,14 @@
     </section>
 
     <section id="contact" class="contact p-lg">
-        <div class="contact__bg"></div>
-        <div class="contact__content wrapper">
-            <h2 class="title-secondary contact__title pb-xxs">Contact</h2>
-            <div class="contact__text">
-                <p class="text-center">Een vraag, een opmerking of een concreet idee?</p>
-                <p class="text-center">Ik hoor het graag!</p>                 
+        <div class="contact__content wrapper wrapper--sm">
+            <h2 class="contact__title title title--tertiary">Get in Touch</h2>
+            <div class="contact__text pb-md">
+                <p class="text-center">Want to work together or have any questions? I’d love to hear from you!</p>
             </div>
-            <a href="mailto:arnauddbu@gmail.com" class="contact__btn btn mb-md">
+            <a href="mailto:arnauddbu@gmail.com" class="contact__btn btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="17.091" height="20.132" viewBox="0 0 17.091 20.132"><path d="M150.206,76.893,147.1,92.911a1.178,1.178,0,0,1-.537.811.794.794,0,0,1-.843-.025l-3.939-2.538-1.862,3.8a.984.984,0,0,1-.671.561.836.836,0,0,1-.777-.273,1.345,1.345,0,0,1-.338-.916V90.1a1.363,1.363,0,0,1,.3-.871l7.673-9.145a.167.167,0,0,0-.07-.139.107.107,0,0,0-.131.012l-9.16,7.955-3.075-1.982a1.16,1.16,0,0,1-.466-.665,1.483,1.483,0,0,1,.023-.883,1.115,1.115,0,0,1,.5-.626l15.162-8.252a.788.788,0,0,1,.7-.036,1.055,1.055,0,0,1,.534.56,1.472,1.472,0,0,1,.092.863Z" transform="translate(-133.142 -75.406)" fill="#edf2ef"/></svg>
-                <span>Bericht versturen</span>
+                <span>Say Hello</span>
             </a>
         </div>
     </section>

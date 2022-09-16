@@ -1,5 +1,5 @@
-$font-primary: 'ClashDisplay';
-$font-secondary: 'Ribes';
+$font-primary: 'Montserrat';
+$font-secondary: 'Montserrat';
 
 $space-unit: 1rem;
 $space-xxs: calc(0.25 * $space-unit);
@@ -10,10 +10,14 @@ $space-lg: calc(2 * $space-unit);
 $space-xl: calc(3.25 * $space-unit);
 $space-xxl: calc(5.25 * $space-unit);
 
-$color-primary: #363636;
+
 $color-primary: #232222;
 $color-secondary: #EDF2EF;  
 $color-tertiary: #7692FF;  
+
+$color-tertiary-2: #4f72db;  
+$color-tertiary-3: #9ab2ff;  
+$color-tertiary-4: #5e7ee8;  
 
 $color-text-primary: #363636;  
 $color-text-secondary: #FFFFFF;  

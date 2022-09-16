@@ -23,10 +23,10 @@ const animations = {
   },
   animateBg() {
     gsap.to('.logo-bg', {
-      opacity: 1,
+      opacity: 0,
       scrollTrigger: 
       {
-        trigger: ".about__title",
+        trigger: ".about__projects",
         start: 'top bottom',
         end: 'bottom top',
         scrub: true
