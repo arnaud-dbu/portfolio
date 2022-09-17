@@ -118,7 +118,8 @@
               end: "bottom top",
               scrub: true
             }
-          }).to(".logo-bg", {
+          });
+          tl.to(".logo-bg", {
             opacity: 0,
             scrollTrigger: {
               trigger: ".projects__title",

@@ -23,8 +23,7 @@ const animations = {
   },
   animateBg() {
     let tl = gsap.timeline();
-    tl
-    .to('.logo-bg', {
+    tl.to('.logo-bg', {
       opacity: 0.25,
       scrollTrigger: 
       {
@@ -34,7 +33,7 @@ const animations = {
         scrub: true
       }
     })
-    .to('.logo-bg', {
+    tl.to('.logo-bg', {
       opacity: 0,
       scrollTrigger: 
       {
