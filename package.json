@@ -17,6 +17,7 @@
     "sass": "^1.50.1"
   },
   "dependencies": {
-    "gsap": "^3.10.4"
+    "gsap": "^3.10.4",
+    "lottie-web": "^5.9.6"
   }
 }

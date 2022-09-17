@@ -1,7 +1,6 @@
 const events = {
   init() {
     this.cacheElements();
-    this.setHeight();
     this.generateUI();
   },
   cacheElements() {
@@ -14,47 +13,80 @@ const events = {
     this.generateMobileNavigation();
   },
   generateMobileNavigation() {
-    this.$hamburgerBtn.addEventListener('click', async (ev) => {
-      ev.preventDefault();
-      await this.$mobileNav.classList.remove('js-hidden');
+    // this.$hamburgerBtn.addEventListener('click', async (ev) => {
+    //   ev.preventDefault();
+    //   await this.$mobileNav.classList.remove('js-hidden');
+    // });
 
-      // await gsap.set('.nav-mobile', {
-      //   y: '-100vh'
-      // })
-      
-      // await gsap.to('.nav-mobile', {
-      //   y: '0',
-      //   duration: .5,
-      //   ease: "power4.out"
-      // })
+    // this.$mobileNavCloseBtn.addEventListener('click', async (ev) => {
+    //   ev.preventDefault();
+
+    //   await this.$mobileNav.classList.add('js-hidden');
+    // })
+
+
+
+    let $menuBtn = document.getElementById('header__hamburger');
+    const $menuBtnContainer = document.querySelector('.header__hamburger-container');
+    let state = 'pause';
+
+    let animation = bodymovin.loadAnimation({
+      container: $menuBtn,
+      path: './src/assets/json/menu.json',
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
     });
-    
-    this.$mobileNavCloseBtn.addEventListener('click', async (ev) => {
+
+    $menuBtn.addEventListener('click', (ev) => {
       ev.preventDefault();
+      if (state === 'pause') {
+        animation.playSegments([1, 20], true);
+        state = 'play';
 
-      // await gsap.to('.nav-mobile', {
-      //   y: '-100vh',
-      //   duration: .5,
-      //   ease: "power4.in"
-      // })
+        gsap.to($menuBtnContainer, {
+          scale: 60,
+          duration: 1.5,
+          ease: "power4.out"
+        })
 
-      await this.$mobileNav.classList.add('js-hidden');
-    })
+        setTimeout(() => {
+          this.$mobileNav.classList.remove('js-hidden');
+        }, 150);
+
+      } else {
+        animation.playSegments([20, 1], true);
+        state = 'pause';
+        
+        this.$mobileNav.classList.add('js-hidden');
+        
+        gsap.to($menuBtnContainer, {
+          scale: 1,
+          duration: .35,
+          ease: "power4.in"
+        })
+      }
+    });
 
     this.$mobileNavLink.forEach(link => {
-      link.addEventListener('click', async (ev) => {
-        this.$mobileNav.classList.add('js-hidden');
+      link.addEventListener('click', (ev) => {
+        animation.playSegments([20, 1], true);
+        state = 'pause';
+        
+        gsap.to($menuBtnContainer, {
+            scale: 1,
+            duration: .35,
+            ease: "power4.in"
+          })
+
+          this.$mobileNav.classList.add('js-hidden');
+        
       }) 
     });
-  }, 
-  setHeight() {
-    const documentHeight = () => {
-      const doc = document.documentElement
-      doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
-     }
-     window.addEventListener('resize', documentHeight)
-     documentHeight()
-  }
+
+
+
+  },
 }
 
 events.init();

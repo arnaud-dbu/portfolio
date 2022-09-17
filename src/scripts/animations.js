@@ -13,7 +13,7 @@ const animations = {
     this.animateBg();
     this.animateHero();
     this.animateTitles();
-    this.animateAbout();
+    this.fadeInFromBottomAnimation();
     this.animateMobileNav();
 
     // isSmall: '(min-width: 414px)',
@@ -22,27 +22,28 @@ const animations = {
     // isExtraLarge: '(min-width: 1920px)',
   },
   animateBg() {
-    gsap.to('.logo-bg', {
-      opacity: 0,
+    let tl = gsap.timeline();
+    tl
+    .to('.logo-bg', {
+      opacity: 0.25,
       scrollTrigger: 
       {
-        trigger: ".about__projects",
+        trigger: ".about__title",
         start: 'top bottom',
         end: 'bottom top',
         scrub: true
       }
     })
-
-    // gsap.to('.logo-bg', {
-    //   opacity: 0,
-    //   scrollTrigger: 
-    //   {
-    //     trigger: ".projects__title",
-    //     start: 'top bottom',
-    //     end: 'bottom top',
-    //     scrub: true
-    //   }
-    // })
+    .to('.logo-bg', {
+      opacity: 0,
+      scrollTrigger: 
+      {
+        trigger: ".projects__title",
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
+      }
+    })
   },
   animateHero() {
 
@@ -57,7 +58,6 @@ const animations = {
     //   })
     // })
 
-    const tl = gsap.timeline({});
 
     // tl.from('.logo-bg__shape', {
     //   scale: 3,
@@ -67,11 +67,11 @@ const animations = {
 
   },
   animateTitles() {
-    const $primaryTitles = document.querySelectorAll('.title-primary');
+    const $primaryTitles = document.querySelectorAll('.title--secondary');
 
     $primaryTitles.forEach((title) => {
       gsap.from(title, {
-        opacity: 0,
+        autoAlpha: 0,
         duration: 1,
         y: "5vh",
         scrollTrigger: 
@@ -81,28 +81,13 @@ const animations = {
         }
       }, )
     })
-
-  
-    // Title Secondary
-
-    // this.$secondaryTitles.forEach(title => {
-    //   gsap.from(title, {
-    //     y: '10vw',
-    //     opacity: 0,
-  
-    //     scrollTrigger: {
-    //       trigger: title,
-    //       start: 'top bottom',
-    //       end: 'bottom top',
-    //     }
-    //   }, )
-    // }) 
   },
-  animateAbout() {
+  fadeInFromBottomAnimation() {
+
     const fadeInFromBottom = (target, trigger) => {
       gsap.from(target, {
         y: "5vh",
-        opacity: 0,
+        autoAlpha: 0,
         duration: 1,
         scrollTrigger: {
           trigger: trigger,
@@ -112,9 +97,8 @@ const animations = {
     }
 
     fadeInFromBottom('.about__content', '.about__content');
-    fadeInFromBottom('.skills__bg', '.skills__bg');
+    fadeInFromBottom('.skills__bg', '.skills__content');
     fadeInFromBottom('.projects__content', '.projects__content');
-    fadeInFromBottom('.contact', '.contact');
     
     gsap.from('.skill', {
       y: "10vh",

@@ -2,12 +2,9 @@
 @use '../utils/mixins'as *;
 
 .nav-mobile {
-    background-color: $color-tertiary;
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-    position: fixed;
+    @include center;
     z-index: 100;
+    position: fixed;
     
     .nav-mobile__content {
         @include flex-column;
@@ -16,10 +13,6 @@
         gap: 3rem;
         height: 100%;
 
-        .nav-mobile__top {
-            @include flex-row-between;
-        }
- 
         .nav-mobile__list {
             @include flex-column-center;
             gap: 1rem;
@@ -27,7 +20,8 @@
             li {
                 a {
                     color: $color-secondary;
-                    font-family: $font-secondary;
+                    font-weight: 800;
+                    font-style: italic;
                     font-size: 2rem;
                     text-transform: uppercase;
                 }
@@ -37,8 +31,7 @@
         .nav-mobile__socials {
             @include flex-row-center;
             gap: 1rem;
-            margin-bottom: 7.5vh;
-
+            
             path {
                 fill: $color-primary;
             }

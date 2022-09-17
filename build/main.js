@@ -24,7 +24,6 @@
       var events2 = {
         init() {
           this.cacheElements();
-          this.setHeight();
           this.generateUI();
         },
         cacheElements() {
@@ -37,27 +36,52 @@
           this.generateMobileNavigation();
         },
         generateMobileNavigation() {
-          this.$hamburgerBtn.addEventListener("click", async (ev) => {
-            ev.preventDefault();
-            await this.$mobileNav.classList.remove("js-hidden");
+          let $menuBtn = document.getElementById("header__hamburger");
+          const $menuBtnContainer = document.querySelector(".header__hamburger-container");
+          let state = "pause";
+          let animation = bodymovin.loadAnimation({
+            container: $menuBtn,
+            path: "./src/assets/json/menu.json",
+            renderer: "svg",
+            loop: false,
+            autoplay: false
           });
-          this.$mobileNavCloseBtn.addEventListener("click", async (ev) => {
+          $menuBtn.addEventListener("click", (ev) => {
             ev.preventDefault();
-            await this.$mobileNav.classList.add("js-hidden");
+            if (state === "pause") {
+              animation.playSegments([1, 20], true);
+              state = "play";
+              gsap.to($menuBtnContainer, {
+                scale: 60,
+                duration: 1.5,
+                ease: "power4.out"
+              });
+              setTimeout(() => {
+                this.$mobileNav.classList.remove("js-hidden");
+              }, 150);
+            } else {
+              animation.playSegments([20, 1], true);
+              state = "pause";
+              this.$mobileNav.classList.add("js-hidden");
+              gsap.to($menuBtnContainer, {
+                scale: 1,
+                duration: 0.35,
+                ease: "power4.in"
+              });
+            }
           });
           this.$mobileNavLink.forEach((link) => {
-            link.addEventListener("click", async (ev) => {
+            link.addEventListener("click", (ev) => {
+              animation.playSegments([20, 1], true);
+              state = "pause";
+              gsap.to($menuBtnContainer, {
+                scale: 1,
+                duration: 0.35,
+                ease: "power4.in"
+              });
               this.$mobileNav.classList.add("js-hidden");
             });
           });
-        },
-        setHeight() {
-          const documentHeight = () => {
-            const doc = document.documentElement;
-            doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
-          };
-          window.addEventListener("resize", documentHeight);
-          documentHeight();
         }
       };
       events2.init();
@@ -81,14 +105,23 @@
           this.animateBg();
           this.animateHero();
           this.animateTitles();
-          this.animateAbout();
+          this.fadeInFromBottomAnimation();
           this.animateMobileNav();
         },
         animateBg() {
-          gsap.to(".logo-bg", {
+          let tl = gsap.timeline();
+          tl.to(".logo-bg", {
+            opacity: 0.25,
+            scrollTrigger: {
+              trigger: ".about__title",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true
+            }
+          }).to(".logo-bg", {
             opacity: 0,
             scrollTrigger: {
-              trigger: ".about__projects",
+              trigger: ".projects__title",
               start: "top bottom",
               end: "bottom top",
               scrub: true
@@ -96,13 +129,12 @@
           });
         },
         animateHero() {
-          const tl = gsap.timeline({});
         },
         animateTitles() {
-          const $primaryTitles = document.querySelectorAll(".title-primary");
+          const $primaryTitles = document.querySelectorAll(".title--secondary");
           $primaryTitles.forEach((title) => {
             gsap.from(title, {
-              opacity: 0,
+              autoAlpha: 0,
               duration: 1,
               y: "5vh",
               scrollTrigger: {
@@ -112,11 +144,11 @@
             });
           });
         },
-        animateAbout() {
+        fadeInFromBottomAnimation() {
           const fadeInFromBottom = (target, trigger) => {
             gsap.from(target, {
               y: "5vh",
-              opacity: 0,
+              autoAlpha: 0,
               duration: 1,
               scrollTrigger: {
                 trigger,
@@ -125,9 +157,8 @@
             });
           };
           fadeInFromBottom(".about__content", ".about__content");
-          fadeInFromBottom(".skills__bg", ".skills__bg");
+          fadeInFromBottom(".skills__bg", ".skills__content");
           fadeInFromBottom(".projects__content", ".projects__content");
-          fadeInFromBottom(".contact", ".contact");
           gsap.from(".skill", {
             y: "10vh",
             opacity: 0,

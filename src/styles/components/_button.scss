@@ -1,6 +1,11 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
+.container {
+    width: 2rem;
+    height: 2rem;
+}
+
 
 .btn {
     @include flex-row-center;
@@ -22,7 +27,7 @@
     }
 
     &:hover {
-            background-color: $color-secondary;
+        background: $color-secondary;
         color: $color-primary;
     }
 
@@ -32,6 +37,6 @@
     
     @include screen-md {
         gap: 0.75rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }

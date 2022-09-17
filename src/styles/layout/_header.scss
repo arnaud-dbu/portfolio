@@ -2,7 +2,6 @@
 @use '../utils/mixins'as *;
 
 .header {
-    $size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,11 +9,8 @@
     width: 100%;
     z-index: 99;
 
-    // opacity: 0.85;
-
     @include screen-lg {
         @include flex-column-start;
-        // background-color: red;
         height: calc(100vh - 4rem);
         position: fixed;
         width: fit-content;
@@ -23,7 +19,10 @@
     &__logo {
         
         img {
-            width: $size * 1.75;
+            $size: 3.25rem;
+            width: $size;
+            position: relative;
+            top: 0.2rem;
 
             @include screen-xl {
                 width: 3.5rem;
@@ -31,23 +30,29 @@
         }
     }
 
+    &__hamburger-container,
     &__hamburger {
-
-        background-color: $color-tertiary;
-        padding: 0.75rem;
-        border-radius: 50%;        
-        
-        img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: $size;
-            height: $size;
-        }
+        $menuBtn: 3rem;
+        height: $menuBtn;
+        width: $menuBtn;
+        position: absolute;
+        right: 0.75rem;
+        z-index: 100;
+        position: fixed;  
 
         @include screen-lg {
             display: none;
         }
+    }
+
+    &__hamburger-container {
+        background-color: $color-tertiary;
+        border-radius: 50%;    
+        
+    }
+    
+    &__hamburger {
+        $menuBtn: 3rem;
     }
 
     &__nav--dekstop {

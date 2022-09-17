@@ -1,6 +1,12 @@
 @use '../utils/variables'as *;
 @use '../utils/mixins'as *;
 
+$background: #0f0c24;
+$blob: #a5a7e3;
+$shades: inset 10px 0 40px #749adb,
+          inset -10px 0 20px #24345e,
+          inset -40px 10px 110px #163648;
+
 .logo-bg {
     width: 100%;
     height: 100%;
@@ -18,12 +24,11 @@
     translate: -50% -50%;
     width: 85vw;
     height: 85vw;
-    background-color: var(--blob);  
-    box-shadow: var(--shades);
+    background-color: $blob;  
+    box-shadow: $shades;
     background-size: 1600% 1600%;
     transform-origin: 50% 50%;
     transform-style: preserve-3d;
-    // filter: blur(0.1rem);
     opacity: 0.6;
     perspective: 1000px;
     animation: 
@@ -64,22 +69,4 @@
 //     100% { transform: none; }
 //      50% { transform: translateY(20%) rotateY(10deg); }
 //   }
-  
-  
-  :root {
-    --background: #fff;
-    --blob: #fdfbfd;
-    --shades: inset 10px 0 40px #f7f7fc,
-              inset -10px 0 20px #e1eef7,
-              inset -40px 10px 100px #c3eae9;
-    
-    @media (prefers-color-scheme: dark) {
-      --background: #0f0c24;
-      --blob: #a5a7e3;
-      --shades: inset 10px 0 40px #749adb,
-                inset -10px 0 20px #24345e,
-                inset -40px 10px 110px #163648;
-    }
-  }
-  
   
