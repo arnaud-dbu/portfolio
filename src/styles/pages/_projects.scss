@@ -41,8 +41,9 @@
             z-index: 1;
 
             .project__tag {
-                background-color: $color-tertiary-3;
-                color: $color-primary;
+                // background-color: $color-tertiary-3;
+                outline: 1.5px solid $color-tertiary-3;
+                color: $color-secondary;
                 border-radius: .75rem;
                 font-size: 0.8rem;
                 width: fit-content;

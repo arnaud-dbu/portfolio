@@ -1,43 +1,101 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .container {
-    width: 2rem;
-    height: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
-
 .btn {
-    @include flex-row-center;
-    font-family: $font-primary;
-    // background: radial-gradient(circle, #5e7ee8 0%, #4f72db 100%);
-    // background-color: $color-tertiary-2; 
-    border: 1px solid $color-secondary;
-    border-radius: 1rem;
-    color: $color-secondary;
-    font-weight: 500;
-    font-size: 1.2rem;
-    padding: 1rem 1rem;
-    width: fit-content;
-    cursor: pointer;
-    // text-transform: uppercase;
-    gap: 0.5rem;
+  @include flex-row-center;
+  font-family: $font-primary;
+  outline: 2px solid $color-secondary;
+  border-radius: 1rem;
+  color: $color-secondary;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2rem;
+  padding: 1rem 1rem;
+  width: fit-content;
+  cursor: pointer;
+  gap: 0.5rem;
+  position: relative;
+  transition: all 0.2s ease-in-out;
 
-    span {
-        pointer-events: none;
-    }
+  span {
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+        5deg,
+        hsl(225deg 66% 58%) 0%,
+        hsl(225deg 67% 59%) 6%,
+        hsl(225deg 68% 60%) 12%,
+        hsl(225deg 69% 60%) 18%,
+        hsl(226deg 70% 61%) 24%,
+        hsl(226deg 71% 62%) 30%,
+        hsl(226deg 72% 62%) 36%,
+        hsl(226deg 73% 63%) 42%,
+        hsl(226deg 74% 64%) 48%,
+        hsl(226deg 74% 64%) 53%,
+        hsl(226deg 73% 63%) 59%,
+        hsl(226deg 72% 62%) 65%,
+        hsl(226deg 71% 62%) 71%,
+        hsl(226deg 70% 61%) 77%,
+        hsl(225deg 69% 60%) 82%,
+        hsl(225deg 68% 60%) 88%,
+        hsl(225deg 67% 59%) 94%,
+        hsl(225deg 66% 58%) 100%
+      );
+    color: $color-secondary;
+    outline: transparent;
+  }
+
+  &:hover svg path {
+    fill: $color-secondary;
+  }
+
+  @include screen-md {
+    gap: 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .btn__arrow {
+    position: absolute;
+    width: 0.65rem;
+    right: 7.5%;
+    top: 36%;
+    opacity: 0;
+  }
+}
+
+.btn--primary {
 
     &:hover {
-        background: $color-secondary;
-        color: $color-primary;
-    }
-
-    &:hover svg path {
-        fill: $color-primary;
+        padding-right: 2.5rem;
     }
     
-    @include screen-md {
-        gap: 0.75rem;
-        font-size: 1.3rem;
+      &:hover .btn__arrow {
+        opacity: 1;
+        transition-delay: 0.1s;
+        transition-property: opacity;
+      }
+}
+
+.btn--secondary {
+    outline: 2.5px solid $color-tertiary-3;
+    color: $color-tertiary-3;
+    
+    &:hover svg {
+        transition: scale .2s ease;
+        scale: 1.2;
     }
+
+    svg {
+        path {
+            fill: $color-tertiary-3;
+        }
+    }
+
 }

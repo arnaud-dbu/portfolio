@@ -113,6 +113,7 @@
           tl.to(".logo-bg", {
             opacity: 0.5,
             scale: 0.7,
+            filter: "blur(0.2rem)",
             scrollTrigger: {
               trigger: ".about__title",
               start: "top bottom",
@@ -146,12 +147,12 @@
             onComplete: () => this.animateScrollEl()
           }, "<-0.75").to(".text", {
             text: { value: "I design and code beautiful simple things, and I love what I do" },
-            duration: 5,
+            duration: 3,
             delay: 1,
             ease: "none"
           }).to(".hero .btn", {
             opacity: 1,
-            duration: 1,
+            duration: 0.5,
             delay: 0.5,
             ease: "power2.out"
           });
@@ -197,18 +198,6 @@
             }
           });
           const $project = document.querySelectorAll(".project");
-        },
-        animateFooter() {
-          gsap.set(".footer__content", {
-            x: "120vw"
-          });
-          gsap.to(".footer__content", {
-            x: "-170vw",
-            duration: 10,
-            repeat: -1
-          });
-        },
-        animateMobileNav() {
         }
       };
       animations2.init();

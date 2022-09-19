@@ -8,6 +8,17 @@
     fill: $color-text-primary;
     width: 100%;
     z-index: 99;
+    position: relative;
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     right: -5rem;
+    //     height: calc(100% - 10vh);
+    //     top: 5vh;
+    //     width: 0.5px;
+    //     background-color: $color-secondary;
+    // }
 
     @include screen-lg {
         @include flex-column-start;
@@ -39,6 +50,7 @@
         right: 0.75rem;
         z-index: 100;
         position: fixed;  
+        cursor: pointer;
 
         @include screen-lg {
             display: none;

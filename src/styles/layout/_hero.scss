@@ -6,6 +6,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @include screen-lg {
     height: 100vh;
@@ -14,22 +15,33 @@
   }
 
   &__content {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    height: 33rem;
 
+    
+    @include screen-xs {
+        height: 34rem;
+    }
+    
     @include screen-sm {
-      padding-left: 3.5rem;
+        padding-left: 3.5rem;
+        height: 32rem;
     }
-
+    
     @include screen-md {
-      padding-left: 5rem;
+        padding-left: 5rem;
+        height: 36rem;
     }
-
+    
     @include screen-lg {
-      width: 100%;
+        @include position-center;
+        width: 100%;
+      height: 34rem;
       @include flex-column-center;
     }
 
@@ -68,7 +80,6 @@
 
     .title--primary-sm {
       @include screen-lg {
-        // font-size: 5rem;
       }
     }
 
@@ -135,162 +146,7 @@
     }
   }
 
-  // &__shapes {
-  //     display: flex;
-  //     gap: 1rem;
-  //     @include center;
-  // }
-
-  // &__bg {
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 50%;
-  //     transform: translate(-50%, -50%);
-  //     width: 1000vw;
-  //     z-index: -1;
-
-  //     @include screen-sm {
-  //         width: 700vw;
-  //     }
-
-  //     @include screen-md {
-  //         width: 600vw;
-
-  //     }
-
-  //     @include screen-lg {
-  //         left: 60%;
-  //         width: 450vw;
-  //     }
-
-  //     @include screen-xl {
-  //         width: 500rem;
-  //     }
-  // }
-
-  // &__name {
-  //     font-family: $font-secondary;
-  //     @include flex-column-center;
-  //     @include center;
-  //     width: 100%;
-  //     text-transform: uppercase;
-
-  //     .hero__name-content {
-  //         position: relative;
-
-  //         .hero__intro {
-  //             color: $color-tertiary;
-  //             line-height: 1.25;
-  //             position: absolute;
-  //             font-size: 6vw;
-  //             top: -12.5%;
-  //             left: 15%;
-  //             line-height: 1;
-
-  //             @include screen-sm {
-  //                 font-size: 5vw;
-  //                 top: -7.5%;
-  //             }
-
-  //             @include screen-md {
-  //                 font-size: 2.5rem;
-  //                 top: -4%;
-  //             }
-
-  //             @include screen-lg {
-  //                 font-size: 2.5rem;
-  //                 top: -5%;
-  //             }
-
-  //             @include screen-xl {
-  //                 font-size: 3.5rem;
-  //                 top: -6%;
-  //             }
-  //         }
-
-  //         .hero__firstname {
-  //             font-size: 23vw;
-
-  //             @include screen-sm {
-  //                 font-size: 22vw;
-  //             }
-
-  //             @include screen-md {
-  //                 font-size: 12rem;
-  //             }
-
-  //             @include screen-lg {
-  //                 font-size: 12rem;
-  //             }
-
-  //             @include screen-xl {
-  //                 font-size: 15rem;
-  //             }
-  //         }
-
-  //         .hero__lastname {
-  //             font-size: 6.5vw;
-  //             position: absolute;
-  //             bottom: -5%;
-  //             right: 15%;
-  //             text-transform: capitalize;
-  //             font-family: $font-primary;
-  //             // font-weight: 400;
-
-  //             @include screen-sm {
-  //                 font-size: 5.5vw;
-  //                 bottom: -0%;
-  //             }
-
-  //             @include screen-md {
-  //                 font-size: 3rem;
-  //                 bottom: -1%;
-  //                 right: 15%;
-  //             }
-
-  //             @include screen-lg {
-  //                 font-size: 2.75rem;
-  //                 bottom: 0%;
-  //                 right: 15%;
-  //             }
-
-  //             @include screen-xl {
-  //                 font-size: 4rem;
-  //                 bottom: -1%;
-  //                 right: 15%;
-  //             }
-
-  //         }
-  //     }
-  // }
-
-  // .hero__function {
-  //     @include flex-column-center;
-  //     position: absolute;
-  //     font-family: $font-secondary;
-  //     text-transform: uppercase;
-  //     text-align: center;
-  //     bottom: 1rem;
-  //     font-size: 6vw;
-  //     line-height: 1.25;
-  //     width: 100%;
-
-  //     @include screen-sm {
-  //         font-size: 5vw;
-  //     }
-
-  //     @include screen-md {
-  //         font-size: 2.5rem;
-  //     }
-
-  //     @include screen-md {
-  //         font-size: 2.5rem;
-  //         bottom: 2rem;
-  //     }
-
-  //     @include screen-md {
-  //         font-size: 2.5rem;
-  //         bottom: 2rem;
-  //     }
-  // }
+  .hero__btn {
+    margin-left: 0.5rem;
+  }
 }
