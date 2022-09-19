@@ -60,11 +60,7 @@
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        border-radius: 4rem;
-        
-        @include screen-lg {
-            border-radius: 5rem;
-        }
+        border-radius: 3rem;
 
         .skills__content {
             @include flex-column;
@@ -108,6 +104,22 @@
                     }
 
                     @include screen-lg {}
+                }
+
+                &__text {
+                    font-size: 1rem;
+                    text-align: center;
+                    font-style: italic;
+                    max-width: 20rem;
+                    
+                    @include screen-sm {
+                        font-size: 1.1rem;
+                    }
+                    
+                    @include screen-lg {
+                        font-size: 1.2rem;
+                        max-width: 25rem;
+                    }
                 }
             }
         }

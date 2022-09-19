@@ -10,16 +10,17 @@
 .btn {
     @include flex-row-center;
     font-family: $font-primary;
-    background: radial-gradient(circle, #5e7ee8 0%, #4f72db 100%);
+    // background: radial-gradient(circle, #5e7ee8 0%, #4f72db 100%);
     // background-color: $color-tertiary-2; 
-    border-radius: 0.7rem;
+    border: 1px solid $color-secondary;
+    border-radius: 1rem;
     color: $color-secondary;
     font-weight: 500;
     font-size: 1.2rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     width: fit-content;
     cursor: pointer;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     gap: 0.5rem;
 
     span {

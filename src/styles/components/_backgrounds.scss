@@ -64,9 +64,9 @@ $shades: inset 10px 0 40px #749adb,
   }
   
   
-//   @keyframes movement {
-//       0%,
-//     100% { transform: none; }
-//      50% { transform: translateY(20%) rotateY(10deg); }
-//   }
+  @keyframes movement {
+      0%,
+    100% { transform: none; }
+     50% { transform: translateY(20%) rotateY(10deg); }
+  }
   

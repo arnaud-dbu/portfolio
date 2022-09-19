@@ -111,16 +111,19 @@
         animateBg() {
           let tl = gsap.timeline();
           tl.to(".logo-bg", {
-            opacity: 0.25,
+            opacity: 0.5,
+            scale: 0.7,
             scrollTrigger: {
               trigger: ".about__title",
               start: "top bottom",
               end: "bottom top",
               scrub: true
             }
-          });
-          tl.to(".logo-bg", {
+          }).set("logo-bg", {
+            opacity: 0.25
+          }).to(".logo-bg", {
             opacity: 0,
+            scale: 0.5,
             scrollTrigger: {
               trigger: ".projects__title",
               start: "top bottom",
@@ -130,6 +133,28 @@
           });
         },
         animateHero() {
+          let tl = gsap.timeline();
+          tl.from(".SlideFromTopAnimation", {
+            y: "-20vh",
+            duration: 0.5,
+            stagger: 0.07,
+            ease: "power2.out"
+          }).to(".cursor", {
+            opacity: 0,
+            ease: "Power4.easeOut",
+            repeat: -1,
+            onComplete: () => this.animateScrollEl()
+          }, "<-0.75").to(".text", {
+            text: { value: "I design and code beautiful simple things, and I love what I do" },
+            duration: 5,
+            delay: 1,
+            ease: "none"
+          }).to(".hero .btn", {
+            opacity: 1,
+            duration: 1,
+            delay: 0.5,
+            ease: "power2.out"
+          });
         },
         animateTitles() {
           const $primaryTitles = document.querySelectorAll(".title--secondary");

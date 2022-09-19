@@ -148,10 +148,22 @@
 }
 
 .wrapper--sm {
-    width: min(80vw, 35rem);
+    width: min(80vw, 30rem);
+    
+    @include screen-md {
+        width: min(80vw, 35rem);
+    }
 
 }
 
 .wrapper-md {}
 
 .wrapper-lg {}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.block {
+    display: block;
+}

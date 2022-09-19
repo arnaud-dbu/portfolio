@@ -23,8 +23,10 @@ const animations = {
   },
   animateBg() {
     let tl = gsap.timeline();
-    tl.to('.logo-bg', {
-      opacity: 0.25,
+    tl
+    .to('.logo-bg', {
+      opacity: 0.5,
+      scale: 0.7,
       scrollTrigger: 
       {
         trigger: ".about__title",
@@ -33,8 +35,12 @@ const animations = {
         scrub: true
       }
     })
-    tl.to('.logo-bg', {
+    .set('logo-bg', {
+      opacity: 0.25
+    })
+    .to('.logo-bg', {
       opacity: 0,
+      scale: 0.5,
       scrollTrigger: 
       {
         trigger: ".projects__title",
@@ -45,24 +51,32 @@ const animations = {
     })
   },
   animateHero() {
+    let tl = gsap.timeline();
 
-    // let mm = gsap.matchMedia();
+    tl
+    .from('.SlideFromTopAnimation', {
+      y: '-20vh',
+      duration: .5,
+      stagger: 0.07,
+      ease: "power2.out",
+    })
+    .to('.cursor', {
+      opacity: 0, 
+      ease: 'Power4.easeOut', 
+      repeat: -1,
+      onComplete: () => this.animateScrollEl()
+    },'<-0.75')
+    .to('.text', 
+    {text: {value: 'I design and code beautiful simple things, and I love what I do'}, duration: 5, delay: 1, ease: 'none'
+  })
+    .to('.hero .btn', {
+      opacity: 1,
+      duration: 1,
+      delay: .5,
+      ease: "power2.out"
+    })
 
-    // mm.add('(min-width: 1250px)', () => {
 
-    //   gsap.from('header', {
-    //     x: "-20vw",
-    //     duration: 1,
-    //     ease: "power4.out"
-    //   })
-    // })
-
-
-    // tl.from('.logo-bg__shape', {
-    //   scale: 3,
-    //   duration: 4,
-    //   ease: "power3.out"
-    // })
 
   },
   animateTitles() {
@@ -138,3 +152,22 @@ const animations = {
 }
 
 animations.init();
+
+
+    // let mm = gsap.matchMedia();
+
+    // mm.add('(min-width: 1250px)', () => {
+
+    //   gsap.from('header', {
+    //     x: "-20vw",
+    //     duration: 1,
+    //     ease: "power4.out"
+    //   })
+    // })
+
+
+    // tl.from('.logo-bg__shape', {
+    //   scale: 3,
+    //   duration: 4,
+    //   ease: "power3.out"
+    // })

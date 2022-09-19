@@ -14,7 +14,7 @@
         }
 
         .footer__bullet {
-            $size: 2vw;
+            $size: min(2vw, 0.75rem);
             width: $size;
             height: $size;
             border: 1.5px solid $color-primary;
@@ -27,16 +27,16 @@
             a {
                 text-transform: uppercase;
                 font-family: $font-primary;
-                font-weight: 500;
+                font-weight: 300;
                 color: $color-primary;
-                font-size: 5vw;
+                font-size: min(5vw, 1.5rem);
 
                 &:hover {
                     color: $color-tertiary;
                 } 
 
                 @include screen-md {
-                    font-size: 2rem;
+                    font-size: 1.75rem;
                 }
             }
         }

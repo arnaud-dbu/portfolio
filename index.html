@@ -74,10 +74,31 @@
         </header>
 
         <hero class="hero__content p-lg">
-            <span class="title title--primary">Hello, I'm Arnaud</span>
-            <span class="title title--primary title--primary-sm">a <em>developer</em> and <em>designer</em></span>
-            <p class="text-primary pv-xs pb-md">I design and code beautiful simple things, and I love what I do</p>
-            <button class="btn">Let's work together</button>
+            <div class="title title--primary">
+                <div class="overflow-hidden">
+                    <span class="SlideFromTopAnimation block">Hello, I'm </span>
+                </div>
+                <div class="overflow-hidden">
+                    <span class="SlideFromTopAnimation block">Arnaud</span>
+                </div>
+            </div>
+            <span class="title title--primary title--primary-sm">
+                <div class="overflow-hidden">
+                    <span class="SlideFromTopAnimation block">
+                        a <em>developer</em> 
+                    </span>
+                </div>
+                <div class="overflow-hidden">
+                    <span class="SlideFromTopAnimation block">
+                        and <em>designer</em></span>
+                    </span>
+                </div>
+                <div class="hero__text pv-xs pb-md">
+                    <p class="hero__text-content"><span class="text "></span><span class="cursor">_</span></p>
+                </div>
+            <a href="mailto:arnauddbu@gmail.com" class=".hero__btn btn opacity-0">
+                <span>Let's work together</span>
+            </a>
         </hero>
     </section>
     
@@ -103,15 +124,18 @@
             <div class="skills__content pv-md wrapper">
                 <div class="skill">
                     <img src="./src/assets/SVG/graphic.svg" alt="Graphic Design" class="skill__icon">
-                    <span class="skill__title">Graphic Design</span>
+                    <span class="skill__title">I design</span>
+                    <span class="skill__text">creative and eye-catching digital graphics like logos or brochures</span>
                 </div>
                 <div class="skill">
                     <img src="./src/assets/SVG/ui.svg" alt="User Interface Design" class="skill__icon">
-                    <span class="skill__title">UI Design</span>
+                    <span class="skill__title">I build</span>
+                    <span class="skill__text">modern, easy-to-use and human-centered user interface designs</span>
                 </div>
                 <div class="skill">
                     <img src="./src/assets/SVG/front-end.svg" alt="Front-end Development" class="skill__icon">
-                    <span class="skill__title">Front-end Development</span>
+                    <span class="skill__title">I develop</span>
+                    <span class="skill__text">user-friendly and fully responsive websites</span>
                 </div>
             </div>
         </div>
@@ -120,40 +144,63 @@
     <section id="projects" class="projects wrapper">
         <h2 class="projects__title title title--secondary">Projects</h2>
         <ul class="projects__content ph-lg wrapper">
-            <li class="project" style="background-image: url(./src/assets/images/luloop-2.webp);">
-                    <a class="project__link" href="https://www.behance.net/gallery/151660791/Luloop" target="_blank">
-                        <span class="project__title">Luloop</span>
-                    </a>
-                </li>
-                <li class="project" style="background-image: url(./src/assets/images/mu.webp);">
-                    <a class="project__link" href="https://www.behance.net/gallery/151708551/Merchtem-United" target="_blank">
-                        <span class="project__title">Merchtem United</span>
-                    </a>
-                </li>
-                <li class="project" style="background-image: url(./src/assets/images/birth.webp);">
-                    <a class="project__link" href="https://www.behance.net/gallery/151706963/Birth-cards" target="_blank">
-                        <span class="project__title">Birth announcements</span>
-                    </a>
-                </li>
-                <li class="project" style="background-image: url(./src/assets/images/babyplanner.webp);">
-                    <a class="project__link" href="https://www.behance.net/gallery/151705575/Babyplanner" target="_blank">
-                        <span class="project__title">Babyplanner</span>
-                    </a>
-                </li>
-                <li class="project" style="background-image: url(./src/assets/images/sushi.webp);">
-                    <a class="project__link" href="https://www.behance.net/gallery/151706613/Sushi-n-Roll" target="_blank">
+
+                    
+            <li class="project">
+                <ul class="project__tags">
+                    <li class="project__tag">Development</li>
+                </ul>
+                <a class="project__link" href="https://pgmgent-atwork-1.github.io/atwork-1-project-2-pgm-arnadebu/" target="_blank" style="background-image: url(./src/assets/images/GF.webp);">
+                    <span class="project__title">#GF2019</span>
+                </a>
+            </li>
+                <li class="project">
+                    <ul class="project__tags">
+                        <li class="project__tag">UI</li>
+                        <li class="project__tag">Development</li>
+                    </ul>
+                    <a class="project__link" href="https://www.behance.net/gallery/151706613/Sushi-n-Roll" target="_blank" style="background-image: url(./src/assets/images/sushi.webp);">
                         <span class="project__title">Sushi 'n Roll</span>
                     </a>
                 </li>
-                <li class="project" style="background-image: url(./src/assets/images/brochure-01.jpg);">
-                    <a class="project__link" href="https://www.behance.net/gallery/151706613/Sushi-n-Roll" target="_blank">
-                        <span class="project__title">De Lariks</span>
+                <li class="project">
+                    <ul class="project__tags">
+                        <li class="project__tag">UI</li>
+                        <li class="project__tag">Development</li>
+                    </ul>
+                    <a class="project__link" href="https://www.behance.net/gallery/151705575/Babyplanner" target="_blank" style="background-image: url(./src/assets/images/babyplanner.webp);">
+                        <span class="project__title">Babyplanner</span>
+                    </a>
+                </li>
+                <li class="project">
+                    <span class="project__title">Luloop</span>
+                        <ul class="project__tags">
+                            <li class="project__tag">design</li>
+                        </ul>
+                        <a class="project__link" href="https://www.behance.net/gallery/151660791/Luloop" target="_blank" style="background-image: url(./src/assets/images/luloop-2.webp);">
+                        </a>
+                    </li>
+                <li class="project">
+                    <ul class="project__tags">
+                        <li class="project__tag">design</li>
+                    </ul>
+                    <a class="project__link" href="https://www.behance.net/gallery/151708551/Merchtem-United" target="_blank" style="background-image: url(./src/assets/images/mu.webp);">
+                        <span class="project__title">Merchtem United</span>
+                    </a>
+                </li>
+                <li class="project">
+                    <ul class="project__tags">
+                        <li class="project__tag">Design</li>
+                    </ul>
+                    <a class="project__link" href="https://www.behance.net/gallery/151706963/Birth-cards" target="_blank" style="background-image: url(./src/assets/images/birth.webp);">
+                        <span class="project__title">Birth announcements</span>
                     </a>
                 </li>
         </ul>
     </section>
 
-    <section id="contact" class="contact p-lg">
+    <section id="contact" class="contact">
+        <div class="contact__bg"></div>
         <div class="contact__content wrapper wrapper--sm">
             <h2 class="contact__title title title--tertiary">Get in Touch</h2>
             <div class="contact__text pb-md">
@@ -169,11 +216,11 @@
     <section class="footer p-sm">
         <ul class="footer__content pb-md">
             <li class="footer__item">
-                <a href="#about">Over mij</a>
+                <a href="#about">About me</a>
             </li>
             <div class="footer__bullet"></div>
             <li class="footer__item">
-                <a href="#projects">Projecten</a>
+                <a href="#projects">Projects</a>
             </li>
             <div class="footer__bullet"></div>
             <li class="footer__item">
@@ -198,7 +245,8 @@
             </li>
         </ul>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>

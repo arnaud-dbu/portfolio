@@ -4,32 +4,54 @@
 .contact {
     @include flex-column-center;
     position: relative;
-    padding-bottom: 3rem;
 
     @include screen-lg {
         align-items: flex-start;
         padding: 0;
     }
-
     
     &__bg {
         @include center;
         pointer-events: none;
-        background-image: url('../src/assets/SVG/bg-chain-2.svg');
+        background-image: url('../src/assets/SVG/logo-bg.svg');
         background-repeat: no-repeat;
         background-position: center;
+        background-size: 17rem;
         width: 100%;
         height: 100%;
         z-index: -1;
-        opacity: 0.85;
+        opacity: 0.05;
+
+        @include screen-xs {                
+            background-size: 18rem;
+        }
+    
+        @include screen-md {
+            background-size: 21rem;
+        }
+        
+        @include screen-xl {
+            background-size: 25rem;
+        }
     }
     
     &__content {
         @include flex-column-center;
-
-        @include screen-lg {
-            padding: 3rem 0 3rem;
+        padding: 3rem 0;
+        margin-bottom: 1rem;
+        
+        @include screen-sm {
+            padding: 5rem 0;
         }
+
+        @include screen-md {
+            padding: 6.5rem 0;
+        }
+        
+        @include screen-xl {
+            padding: 7.5rem 0;
+        }
+
     
         .contact__text {
             @include flex-column-center;
