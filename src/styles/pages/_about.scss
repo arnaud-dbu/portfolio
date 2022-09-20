@@ -1,128 +1,125 @@
-@use '../utils/variables'as *;
-@use '../utils/mixins'as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .about {
+  &__content {
+    @include flex-column-center;
 
-    &__content {
-        @include flex-column-center;
+    @include screen-md {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    @include screen-lg {
+      padding: 0;
+    }
+
+    .about__text {
+      p {
+        margin-bottom: 1rem;
+      }
+
+      @include screen-md {
+        text-align: start;
+        padding-left: 2rem;
+      }
+
+      @include screen-lg {
+        // font-size: 1.5rem;
+      }
+    }
+
+    .about__img-container {
+      order: -1;
+
+      .about__img {
+        object-fit: cover;
+        $size: 10rem;
+        width: $size;
+        height: $size;
+        box-shadow: 1px 1px 8px 0px #232222;
 
         @include screen-md {
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 0.5rem;
+          width: 13.5rem;
+          height: 13.5rem;
         }
-
-        @include screen-lg {
-            padding: 0;
-        }
-
-
-        .about__text {
-
-            p {
-                margin-bottom: 1rem;
-            }
-
-            @include screen-md {
-                text-align: start;
-                padding-left: 2rem;
-            }
-
-            @include screen-lg {
-                // font-size: 1.5rem;
-            }
-        }
-
-        .about__img-container {
-            order: -1;
-
-            .about__img {
-                object-fit: cover;
-                $size: 10rem;
-                width: $size;
-                height: $size;
-                box-shadow: 1px 1px 8px 0px #232222;
-
-                @include screen-md {
-                    width: 13.5rem;
-                    height: 13.5rem;
-                }
-            }
-        }
+      }
     }
+  }
 }
 
 .skills {
+  .skills__bg {
+    background: rgba(101, 101, 101, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 3rem;
 
-    .skills__bg {
-        background: rgba(101, 101, 101, 0.15);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 3rem;
+    .skills__content {
+      @include flex-column;
+      width: min(100%, 30rem);
+      gap: 3rem;
 
-        .skills__content {
-            @include flex-column;
-            width: min(100%, 30rem);
-            gap: 3rem;
+      .skill {
+        @include flex-column-center;
 
-            .skill {
-                @include flex-column-center;
+        &__icon {
+          width: 5rem;
+          fill: $color-tertiary;
+          margin-bottom: 0.5rem;
 
-                &__icon {
-                    width: 5rem;
-                    fill: $color-tertiary;
-                    margin-bottom: 0.5rem;
+          @include screen-md {
+            width: 6rem;
+          }
 
-                    @include screen-md {
-                        width: 6rem;
-                    }
-
-                    @include screen-lg {
-                        width: 5rem;
-                    }
-                }
-
-                &__title {
-                    font-size: 1.65rem;
-                    text-align: center;
-                    max-width: 15rem;
-
-                    @include screen-sm {
-                        max-width: 20rem;
-                        font-size: 1.8rem;
-                    }
-
-                    @include screen-md {
-                        max-width: 30rem;
-                        font-size: 2rem;
-                    }
-                    
-                    @include screen-lg {
-                        font-size: 2rem;
-                    }
-
-                    @include screen-lg {}
-                }
-
-                &__text {
-                    font-size: 1rem;
-                    text-align: center;
-                    font-style: italic;
-                    max-width: 20rem;
-                    position: relative;
-                    
-                    @include screen-sm {
-                        font-size: 1.1rem;
-                    }
-                    
-                    @include screen-lg {
-                        font-size: 1.2rem;
-                        max-width: 25rem;
-                    }
-                }
-            }
+          @include screen-lg {
+            width: 5rem;
+          }
         }
+
+        &__title {
+          font-size: 1.65rem;
+          text-align: center;
+          max-width: 15rem;
+
+          @include screen-sm {
+            max-width: 20rem;
+            font-size: 1.8rem;
+          }
+
+          @include screen-md {
+            max-width: 30rem;
+            font-size: 2rem;
+          }
+
+          @include screen-lg {
+            font-size: 2rem;
+          }
+
+          @include screen-lg {
+          }
+        }
+
+        &__text {
+          font-size: 1rem;
+          text-align: center;
+          font-style: italic;
+          max-width: 20rem;
+          position: relative;
+
+          @include screen-sm {
+            font-size: 1.1rem;
+          }
+
+          @include screen-lg {
+            font-size: 1.2rem;
+            max-width: 25rem;
+          }
+        }
+      }
     }
+  }
 }

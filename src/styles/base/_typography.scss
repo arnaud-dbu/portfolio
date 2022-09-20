@@ -1,85 +1,80 @@
-@use '../utils/variables'as *;
-@use '../utils/mixins'as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .title {
-    display: block;
-    font-weight: 800;
-    font-style: italic;
+  display: block;
+  font-weight: 800;
+  font-style: italic;
 }
 
 .title--primary {
-    font-size: 3rem;
-    line-height: 1.1;
+  font-size: 3rem;
+  line-height: 1.1;
 
-    em {
-        color: $color-tertiary;
-    }
+  em {
+    color: $color-tertiary;
+  }
 }
 
 .title--secondary {
-    font-size: min(12.5vw, 3.5rem);
-    text-align: center;
-    position: relative;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
+  font-size: min(12.5vw, 3.5rem);
+  text-align: center;
+  position: relative;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: min(20%, 4rem);
+    height: 10px;
+    background-color: $color-tertiary;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include screen-sm {
+    font-size: 3.5rem;
+  }
+
+  @include screen-md {
+    font-size: 4rem;
 
     &::after {
-        content: "";
-        position: absolute;
-        width: min(20%, 4rem);
-        height: 10px;
-        background-color: $color-tertiary;
-        bottom: -1rem;
-        left: 50%;
-        transform: translateX(-50%);
+      width: min(20%, 5rem);
+      height: 12.5px;
     }
-
-    @include screen-sm {
-        font-size: 3.5rem;
-    }
-    
-    @include screen-md {
-        font-size: 4rem;
-
-        &::after {
-            width: min(20%, 5rem);
-            height: 12.5px;
-        }
-    }
-
+  }
 }
 
 .title--tertiary {
-    font-size: 2rem;
-    text-align: center;
-    position: relative;
-    text-transform: uppercase;
-    font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 800;
 
-    @include screen-sm {
+  @include screen-sm {
     font-size: 2.5rem;
-    }
+  }
 
-    @include screen-md {
-        font-size: 3rem;
-    }
-    
-    @include screen-lg {
-        font-size: 4rem;
-    }
+  @include screen-md {
+    font-size: 3rem;
+  }
+
+  @include screen-lg {
+    font-size: 4rem;
+  }
 }
 
 .text-primary {
-    font-size: 1.5rem;
-    margin: 0;
-    font-weight: 250;
-    font-style: normal;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 250;
+  font-style: normal;
 }
 
 .text-center {
-    text-align: center;
-}
-
-.text {
-    color: white;
+  text-align: center;
 }

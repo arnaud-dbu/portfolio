@@ -1,169 +1,161 @@
-@use '../utils/variables'as *;
-@use '../utils/mixins'as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .p-xs {
-    padding: $space-xs;
+  padding: $space-xs;
 }
 
 .p-sm {
-    padding: $space-sm;
+  padding: $space-sm;
 }
 
 .p-md {
-    padding: $space-md;
+  padding: $space-md;
 }
 
 .p-lg {
-    padding: $space-lg;
+  padding: $space-lg;
 }
 
 .p-xl {
-    padding: $space-xl;
+  padding: $space-xl;
 }
 
 .p-xxl {
-    padding: $space-xxl;
+  padding: $space-xxl;
 }
 
 .ph-xs {
-    padding: 0 $space-xs;
+  padding: 0 $space-xs;
 }
 
 .ph-sm {
-    padding: 0 $space-sm;
+  padding: 0 $space-sm;
 }
 
 .ph-md {
-    padding: 0 $space-md;
+  padding: 0 $space-md;
 }
 
 .ph-lg {
-    padding: 0 $space-lg;
+  padding: 0 $space-lg;
 }
 
 .ph-xl {
-    padding: 0 $space-xl;
+  padding: 0 $space-xl;
 }
 
 .ph-xxl {
-    padding: 0 $space-xxl;
+  padding: 0 $space-xxl;
 }
 
 .pv-xs {
-    padding: $space-xs 0;
+  padding: $space-xs 0;
 }
 
 .pv-sm {
-    padding: $space-sm 0;
+  padding: $space-sm 0;
 }
 
 .pv-md {
-    padding: $space-md 0;
+  padding: $space-md 0;
 }
 
 .pv-lg {
-    padding: $space-lg 0;
+  padding: $space-lg 0;
 }
 
 .pv-xl {
-    padding: $space-xl 0;
+  padding: $space-xl 0;
 }
 
 .pv-xxl {
-    padding: $space-xxl 0;
+  padding: $space-xxl 0;
 }
 
 .pb-xs {
-    padding-bottom: $space-xs;
+  padding-bottom: $space-xs;
 }
 
 .pb-sm {
-    padding-bottom: $space-sm;
+  padding-bottom: $space-sm;
 }
 
 .pb-md {
-    padding-bottom: $space-md;
+  padding-bottom: $space-md;
 }
 
 .pb-lg {
-    padding-bottom: $space-lg;
+  padding-bottom: $space-lg;
 }
 
 .pb-xl {
-    padding-bottom: $space-xl;
+  padding-bottom: $space-xl;
 }
 
 .pb-xxl {
-    padding-bottom: $space-xxl;
+  padding-bottom: $space-xxl;
 }
 
 .pt-xs {
-    padding-top: $space-xs;
+  padding-top: $space-xs;
 }
 
 .pt-sm {
-    padding-top: $space-sm;
+  padding-top: $space-sm;
 }
 
 .pt-md {
-    padding-top: $space-md;
+  padding-top: $space-md;
 }
 
 .pt-lg {
-    padding-top: $space-lg;
+  padding-top: $space-lg;
 }
 
 .pt-xl {
-    padding-top: $space-xl;
+  padding-top: $space-xl;
 }
 
 .pt-xxl {
-    padding-top: $space-xxl;
+  padding-top: $space-xxl;
 }
 
-// Wrapper 
-
 .wrapper {
+  @include screen-sm {
+    width: min(80vw, 55rem);
+    margin: 0 auto;
+  }
 
-    @include screen-sm {
-        width: min(80vw, 55rem);
-        margin: 0 auto;
-    }
-    
-    @include screen-md {
-        width: min(90vw, 55rem);
-    }
-    
-    @include screen-lg {
-        width: min(90vw, 50rem);
-    }
-    
-    @media (min-width: 1500px) {
-        width: min(90vw, 55rem);
-    }
-    
-    @include screen-xl {
-        width: min(90vw, 60rem);
-    }
+  @include screen-md {
+    width: min(90vw, 55rem);
+  }
+
+  @include screen-lg {
+    width: min(90vw, 50rem);
+  }
+
+  @media (min-width: 1500px) {
+    width: min(90vw, 55rem);
+  }
+
+  @include screen-xl {
+    width: min(90vw, 60rem);
+  }
 }
 
 .wrapper--sm {
-    width: min(80vw, 30rem);
-    
-    @include screen-md {
-        width: min(80vw, 35rem);
-    }
+  width: min(80vw, 30rem);
 
+  @include screen-md {
+    width: min(80vw, 35rem);
+  }
 }
 
-.wrapper-md {}
-
-.wrapper-lg {}
-
 .overflow-hidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .block {
-    display: block;
+  display: block;
 }

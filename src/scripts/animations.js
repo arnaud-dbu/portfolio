@@ -7,7 +7,6 @@ const animations = {
     this.$name = document.querySelector('.hero__name');
     this.$primaryTitles = document.querySelectorAll('.title-primary');
     this.$secondaryTitles = document.querySelectorAll('.title-secondary');
-
   },
   generateUI() {
     this.animateBg();
@@ -19,58 +18,61 @@ const animations = {
   animateBg() {
     let tl = gsap.timeline();
     tl
-    .to('.logo-bg', {
-      opacity: 0.5,
-      scale: 0.7,
-      filter:"blur(0.2rem)",
-      scrollTrigger: 
-      {
-        trigger: ".about__title",
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true
-      }
-    })
-    .set('logo-bg', {
-      opacity: 0.25
-    })
-    .to('.logo-bg', {
-      opacity: 0,
-      scale: 0.5,
-      scrollTrigger: 
-      {
-        trigger: ".projects__title",
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true
-      }
-    })
+      .to('.logo-bg', {
+        opacity: 0.5,
+        scale: 0.7,
+        filter: "blur(0.2rem)",
+        scrollTrigger: {
+          trigger: ".about__title",
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
+      })
+      .set('logo-bg', {
+        opacity: 0.25
+      })
+      .to('.logo-bg', {
+        opacity: 0,
+        scale: 0.5,
+        scrollTrigger: {
+          trigger: ".projects__title",
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
+      })
   },
   animateHero() {
     let tl = gsap.timeline();
 
     tl
-    .from('.SlideFromTopAnimation', {
-      y: '-20vh',
-      duration: .5,
-      stagger: 0.07,
-      ease: "power2.out",
-    })
-    .to('.cursor', {
-      opacity: 0, 
-      ease: 'Power4.easeOut', 
-      repeat: -1,
-      onComplete: () => this.animateScrollEl()
-    },'<-0.75')
-    .to('.text', 
-    {text: {value: 'I design and code beautiful simple things, and I love what I do'}, duration: 3, delay: 1, ease: 'none'
-  })
-    .to('.hero .btn', {
-      opacity: 1,
-      duration: 0.5,
-      delay: .5,
-      ease: "power2.out"
-    })
+      .from('.SlideFromTopAnimation', {
+        y: '-20vh',
+        duration: .5,
+        stagger: 0.07,
+        ease: "power2.out",
+      })
+      .to('.cursor', {
+        opacity: 0,
+        ease: 'Power4.easeOut',
+        repeat: -1,
+        onComplete: () => this.animateScrollEl()
+      }, '<-0.75')
+      .to('.text', {
+        text: {
+          value: 'I design and code beautiful simple things, and I love what I do'
+        },
+        duration: 5,
+        delay: 1,
+        ease: 'none'
+      })
+      .to('.hero .btn', {
+        opacity: 1,
+        duration: 0.5,
+        delay: .5,
+        ease: "power2.out"
+      })
   },
   animateTitles() {
     const $primaryTitles = document.querySelectorAll('.title--secondary');
@@ -80,8 +82,7 @@ const animations = {
         autoAlpha: 0,
         duration: 1,
         y: "5vh",
-        scrollTrigger: 
-        {
+        scrollTrigger: {
           trigger: title,
           start: 'top 85%',
         }
@@ -105,7 +106,7 @@ const animations = {
     fadeInFromBottom('.about__content', '.about__content');
     fadeInFromBottom('.skills__bg', '.skills__content');
     fadeInFromBottom('.projects__content', '.projects__content');
-    
+
     gsap.from('.skill', {
       y: "10vh",
       opacity: 0,
@@ -117,36 +118,6 @@ const animations = {
         start: 'top 85%',
       }
     })
-    
-    const $project = document.querySelectorAll('.project');
-    
-    // $project.forEach((project) => {
-    //   fadeInFromBottom(project, project);
-    // })
-
-
-
-
   },
 }
-
 animations.init();
-
-
-    // let mm = gsap.matchMedia();
-
-    // mm.add('(min-width: 1250px)', () => {
-
-    //   gsap.from('header', {
-    //     x: "-20vw",
-    //     duration: 1,
-    //     ease: "power4.out"
-    //   })
-    // })
-
-
-    // tl.from('.logo-bg__shape', {
-    //   scale: 3,
-    //   duration: 4,
-    //   ease: "power3.out"
-    // })

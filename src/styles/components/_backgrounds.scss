@@ -1,76 +1,89 @@
-@use '../utils/variables'as *;
-@use '../utils/mixins'as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 $background: #0f0c24;
 $blob: #a5a7e3;
-$shades: inset 10px 0 40px #749adb,
-          inset -10px 0 20px #24345e,
-          inset -40px 10px 110px #163648;
+$shades: inset 10px 0 40px #749adb, inset -10px 0 20px #24345e,
+  inset -40px 10px 110px #163648;
 
 .logo-bg {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
 }
 
 .logo-morph::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    width: 85vw;
-    height: 85vw;
-    background-color: $blob;  
-    box-shadow: $shades;
-    background-size: 1600% 1600%;
-    transform-origin: 50% 50%;
-    transform-style: preserve-3d;
-    opacity: 0.6;
-    perspective: 1000px;
-    animation: 
-      transform 50s ease-in-out infinite both alternate,
-      movement 40s ease-in-out infinite both;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  width: 85vw;
+  height: 85vw;
+  background-color: $blob;
+  box-shadow: $shades;
+  background-size: 1600% 1600%;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  opacity: 0.6;
+  perspective: 1000px;
+  animation: transform 50s ease-in-out infinite both alternate,
+    movement 40s ease-in-out infinite both;
 
-      @include screen-sm {
-        width: 65vw;
-        height: 65vw;
-      }
+  @include screen-sm {
+    width: 65vw;
+    height: 65vw;
+  }
 
-      @include screen-md {
-        width: min(60vw, 35rem);
-        height: min(60vw, 35rem);
-      }
+  @include screen-md {
+    width: min(60vw, 35rem);
+    height: min(60vw, 35rem);
+  }
 
-      @include screen-lg {
-      width: min(60vw, 45rem);
-      height: min(60vw, 45rem);
-      }
-      
-      @include screen-xl {
-        width: min(60vw, 55rem);
-        height: min(60vw, 55rem);
-      }
+  @include screen-lg {
+    width: min(60vw, 45rem);
+    height: min(60vw, 45rem);
   }
-  
-  
-  @keyframes transform {
-      0%,
-    100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
-     14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
-     28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
-     42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
-     56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
-     70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
-     84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+
+  @include screen-xl {
+    width: min(60vw, 55rem);
+    height: min(60vw, 55rem);
   }
-  
-  
-  @keyframes movement {
-      0%,
-    100% { transform: none; }
-     50% { transform: translateY(15%) rotateY(10deg); }
+}
+
+@keyframes transform {
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   }
-  
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+@keyframes movement {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(15%) rotateY(10deg);
+  }
+}

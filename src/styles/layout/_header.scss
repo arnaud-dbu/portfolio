@@ -1,169 +1,115 @@
-@use '../utils/variables'as *;
-@use '../utils/mixins'as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    fill: $color-text-primary;
-    width: 100%;
-    z-index: 99;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  fill: $color-text-primary;
+  width: 100%;
+  z-index: 99;
+  position: relative;
 
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     right: -5rem;
-    //     height: calc(100% - 10vh);
-    //     top: 5vh;
-    //     width: 0.5px;
-    //     background-color: $color-secondary;
-    // }
+  @include screen-lg {
+    @include flex-column-start;
+    height: calc(100vh - 4rem);
+    position: fixed;
+    width: fit-content;
+  }
+
+  &__logo {
+    img {
+      $size: 3.25rem;
+      width: $size;
+      position: relative;
+      top: 0.2rem;
+
+      @include screen-xl {
+        width: 3.5rem;
+      }
+    }
+  }
+
+  &__hamburger-container,
+  &__hamburger {
+    $menuBtn: 3rem;
+    height: $menuBtn;
+    width: $menuBtn;
+    position: absolute;
+    right: 0.75rem;
+    z-index: 100;
+    position: fixed;
+    cursor: pointer;
 
     @include screen-lg {
-        @include flex-column-start;
-        height: calc(100vh - 4rem);
-        position: fixed;
-        width: fit-content;
+      display: none;
     }
+  }
 
-    &__logo {
-        
-        img {
-            $size: 3.25rem;
-            width: $size;
-            position: relative;
-            top: 0.2rem;
+  &__hamburger-container {
+    background-color: $color-tertiary;
+    border-radius: 50%;
+  }
 
-            @include screen-xl {
-                width: 3.5rem;
-            }
+  &__hamburger {
+    $menuBtn: 3rem;
+  }
+
+  &__nav--dekstop {
+    display: none;
+
+    @include screen-lg {
+      @include flex-column-start;
+      gap: 1rem;
+
+      li {
+        a {
+          color: $color-secondary;
+          font-size: 1.4rem;
+          position: relative;
+          text-decoration: none;
+
+          @include screen-xl {
+            font-size: 1.75rem;
+          }
+
+          &:hover {
+            color: $color-tertiary;
+          }
         }
+      }
+    }
+  }
+
+  &__socials {
+    display: none;
+
+    li {
+      width: 100%;
+      height: 100%;
+      background-color: $color-primary;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover path {
+        fill: $color-tertiary;
+      }
+
+      svg {
+        @include flex-column-center;
+        width: 2.25rem;
+      }
     }
 
-    &__hamburger-container,
-    &__hamburger {
-        $menuBtn: 3rem;
-        height: $menuBtn;
-        width: $menuBtn;
-        position: absolute;
-        right: 0.75rem;
-        z-index: 100;
-        position: fixed;  
-        cursor: pointer;
-
-        @include screen-lg {
-            display: none;
-        }
+    path {
+      &:hover {
+        fill: $color-tertiary;
+      }
     }
 
-    &__hamburger-container {
-        background-color: $color-tertiary;
-        border-radius: 50%;    
-        
+    @include screen-lg {
+      @include flex-column-start;
+      gap: 1.25rem;
     }
-    
-    &__hamburger {
-        $menuBtn: 3rem;
-    }
-
-    &__nav--dekstop {
-        display: none;
-
-        @include screen-lg {
-            @include flex-column-start;
-            gap: 1rem;
-
-            li {
-                a {
-                    color: $color-secondary;
-                    font-size: 1.4rem;
-                    position: relative;
-                    text-decoration: none;
-
-                    @include screen-xl {
-                        font-size: 1.75rem;
-                    }
-
-                    &:hover {
-                        color: $color-tertiary;
-                    }
-                }
-
-                // a::before {
-                //     content: '';
-                //     position: absolute;
-                //     width: 100%;
-                //     height: 2px;
-                //     border-radius: 4px;
-                //     background-color: $color-tertiary;
-                //     bottom: 0;
-                //     left: 0;
-                //     transform-origin: right;
-                //     transform: scaleX(0);
-                //     transition: transform .3s ease-in-out;
-                // }
-
-                // a:hover::before {
-                //     transform-origin: left;
-                //     transform: scaleX(1);
-                // }
-
-            }
-        }
-    }
-
-    &__socials {
-        display: none;
-        
-        li {
-            width: 100%;
-            height: 100%;
-            background-color: $color-primary;
-            border-radius: 50%;
-            cursor: pointer;
-
-            // path {
-            //     transition: all .3s ease-out;
-            // }
-
-            &:hover path {
-                fill: $color-tertiary;
-            }
-            
-            
-            svg {
-                @include flex-column-center;
-                width: 2.25rem;
-            }
-        
-        
-        }
-        
-
-        path {
-
-            &:hover {
-                fill: $color-tertiary;
-            }
-        }
-
-        @include screen-lg {
-            @include flex-column-start;
-            gap: 1.25rem;
-
-
-
-
-            // svg {
-            //     transition: fill .3s ease-in-out;
-            //     cursor: pointer;
-            // }
-
-            // :hover {
-            //     fill: $color-tertiary;
-            // }
-
-        }
-    }
+  }
 }

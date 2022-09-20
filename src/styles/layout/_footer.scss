@@ -1,68 +1,66 @@
-@use '../utils/variables'as *;
-@use '../utils/mixins'as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .footer {
-    background-color: $color-secondary;
+  background-color: $color-secondary;
 
-    &__content {
+  &__content {
+    @include flex-row-center;
+    gap: 2vw;
 
-        @include flex-row-center;
-        gap: 2vw;
+    @include screen-md {
+      gap: 1rem;
+    }
+
+    .footer__bullet {
+      $size: min(2vw, 0.75rem);
+      width: $size;
+      height: $size;
+      border: 1.5px solid $color-primary;
+      border-radius: 50%;
+    }
+
+    .footer__item {
+      position: relative;
+
+      a {
+        text-transform: uppercase;
+        font-family: $font-primary;
+        font-weight: 300;
+        color: $color-primary;
+        font-size: min(5vw, 1.5rem);
+
+        &:hover {
+          color: $color-tertiary;
+        }
 
         @include screen-md {
-            gap: 1rem;
+          font-size: 1.75rem;
         }
+      }
+    }
+  }
 
-        .footer__bullet {
-            $size: min(2vw, 0.75rem);
-            width: $size;
-            height: $size;
-            border: 1.5px solid $color-primary;
-            border-radius: 50%;
+  &__socials {
+    @include flex-row-center;
+    gap: 1rem;
+
+    li {
+      a {
+        svg {
+          &:hover path {
+            fill: $color-tertiary;
+          }
         }
-
-        .footer__item {
-            position: relative;
-
-            a {
-                text-transform: uppercase;
-                font-family: $font-primary;
-                font-weight: 300;
-                color: $color-primary;
-                font-size: min(5vw, 1.5rem);
-
-                &:hover {
-                    color: $color-tertiary;
-                } 
-
-                @include screen-md {
-                    font-size: 1.75rem;
-                }
-            }
-        }
+      }
     }
 
-    &__socials {
-        @include flex-row-center;
-        gap: 1rem;
-
-        li {
-            a {
-                svg {
-                    &:hover path {
-                        fill: $color-tertiary;
-                    }
-
-                }
-            }
-        }
-
-        path {
-            fill: $color-primary;
-        }
+    path {
+      fill: $color-primary;
     }
+  }
 
-    @include screen-lg {
-        display: none;
-    }
+  @include screen-lg {
+    display: none;
+  }
 }

@@ -1,46 +1,44 @@
-@use '../utils/variables'as *;
-@use '../utils/mixins'as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .nav-mobile {
-    @include center;
-    z-index: 100;
-    position: fixed;
-    
-    .nav-mobile__content {
-        @include flex-column;
-        justify-content: space-between;
-        height: 92.5%;
-        gap: 3rem;
-        height: 100%;
+  @include center;
+  z-index: 100;
+  position: fixed;
 
+  .nav-mobile__content {
+    @include flex-column;
+    justify-content: space-between;
+    height: 92.5%;
+    gap: 3rem;
+    height: 100%;
 
-        .nav-mobile__list {
-            @include flex-column-center;
-            gap: 1rem;
+    .nav-mobile__list {
+      @include flex-column-center;
+      gap: 1rem;
 
-            li {
-                a {
-                    color: $color-secondary;
-                    font-weight: 800;
-                    font-style: italic;
-                    font-size: 2rem;
-                    text-transform: uppercase;
+      li {
+        a {
+          color: $color-secondary;
+          font-weight: 800;
+          font-style: italic;
+          font-size: 2rem;
+          text-transform: uppercase;
 
-                    @include screen-md {
-                        font-size: 2.3rem;
-                    }
-                }
-            }
+          @include screen-md {
+            font-size: 2.3rem;
+          }
         }
-
-        .nav-mobile__socials {
-            @include flex-row-center;
-            gap: 1rem;
-            
-            path {
-                fill: $color-primary;
-            }
-        }
+      }
     }
 
+    .nav-mobile__socials {
+      @include flex-row-center;
+      gap: 1rem;
+
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
 }
